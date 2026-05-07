@@ -1,0 +1,2313 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- SEO + Social -->
+<title>Startup Weekend Timbó 2026 · 54 horas para tirar uma ideia do papel</title>
+<meta name="description" content="Startup Weekend Timbó 2026: 54 horas para transformar uma ideia em produto e descobrir do que você é capaz. 14 a 16 de agosto, no Vale do Itajaí. Empreender na prática, com mentores e jurados." />
+<meta name="keywords" content="Startup Weekend Timbó, evento de empreendedorismo, inovação Vale do Itajaí, startup weekend Santa Catarina, empreender na prática, hackathon Timbó, Techstars" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="event" />
+<meta property="og:title" content="Startup Weekend Timbó 2026 · 54 horas para tirar uma ideia do papel" />
+<meta property="og:description" content="14 a 16 de agosto · Tire uma ideia do papel em um fim de semana. Empreender na prática, no Vale do Itajaí." />
+<meta property="og:image" content="/og-image.jpg" />
+<meta property="og:url" content="https://swtimbo.com.br" />
+<meta property="og:locale" content="pt_BR" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Startup Weekend Timbó 2026" />
+<meta name="twitter:description" content="54 horas para tirar uma ideia do papel · 14 a 16 de agosto · Vale do Itajaí" />
+<meta name="twitter:image" content="/og-image.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+
+<!-- Schema.org Event -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BusinessEvent",
+  "name": "Startup Weekend Timbó 2026",
+  "startDate": "2026-08-14T19:00",
+  "endDate": "2026-08-16T21:00",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "location": {
+    "@type": "Place",
+    "name": "CET — Centro Empresarial de Timbó",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "R. Duque de Caxias, 830",
+      "addressLocality": "Timbó",
+      "addressRegion": "SC",
+      "addressCountry": "BR"
+    }
+  },
+  "description": "54 horas para transformar uma ideia em produto. Empreender na prática, no Vale do Itajaí.",
+  "organizer": {
+    "@type": "Organization",
+    "name": "Techstars Startup Weekend Timbó"
+  }
+}
+</script>
+
+<style>
+  :root {
+    --orange: #E8571E;
+    --orange-dark: #C8430F;
+    --orange-deep: oklch(0.45 0.15 40);
+    --orange-soft: oklch(0.94 0.04 50);
+    --orange-warm: oklch(0.97 0.025 55);
+    --blue: #2BA8E0;
+    --blue-dark: #1d8cc1;
+    --ink: #1A1A1A;
+    --ink-soft: #3D3D3D;
+    --ink-muted: #6B6B6B;
+    --ink-faint: #999999;
+    --paper: #FAFAF7;
+    --paper-warm: #F4EEE8;
+    --paper-warmer: #ECE3D8;
+    --paper-deep: #E5D9C8;
+    --line: oklch(0.85 0.01 60);
+    --line-soft: oklch(0.9 0.01 60);
+    --display: 'Archivo', sans-serif;
+    --body: 'Source Serif 4', Georgia, serif;
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--body);
+    background: var(--paper);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* ─── MOCKUP UI ─── */
+  .mockup-banner {
+    background: var(--ink);
+    color: var(--paper);
+    text-align: center;
+    padding: 12px 24px;
+    font-family: var(--display);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .mockup-banner span { color: var(--orange); }
+  .section-tag {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--display);
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 4px;
+    z-index: 10;
+    pointer-events: none;
+  }
+  section { position: relative; }
+
+  /* ─── COMMON ─── */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  .container-narrow { max-width: 980px; margin: 0 auto; padding: 0 32px; }
+
+  .eyebrow {
+    font-family: var(--display);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--blue);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 2px;
+    background: var(--blue);
+    flex-shrink: 0;
+  }
+
+  /* HIERARQUIA TIPOGRÁFICA RECALIBRADA */
+  h2.section-title {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+    line-height: 1.1;
+    color: var(--ink);
+    letter-spacing: -0.022em;
+    max-width: 22ch;
+    margin-bottom: 16px;
+  }
+  h2.section-title em { font-style: normal; color: var(--orange); }
+
+  .section-intro {
+    font-family: var(--body);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    max-width: 52ch;
+    margin-bottom: 48px;
+  }
+
+  /* ─── NAV (sticky) ─── */
+  .nav-wrapper {
+    position: sticky;
+    top: 40px;
+    background: oklch(0.98 0.005 80 / 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line-soft);
+    z-index: 50;
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .nav-brand {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+  }
+  .nav-brand span { color: var(--orange); }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a {
+    font-family: var(--display);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--ink-soft);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    transition: color 0.15s ease;
+    cursor: pointer;
+  }
+  .nav-links a:hover { color: var(--orange); }
+  .nav-cta {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 10px 20px;
+    background: var(--orange);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  .nav-cta:hover { background: var(--orange-dark); transform: translateY(-1px); }
+
+  /* ════════════════════════════════════════════
+     HERO — começo "acessível", emoção contida
+     ════════════════════════════════════════════ */
+  .hero {
+    padding: 64px 0 56px;
+    background: var(--paper);
+    position: relative;
+    overflow: hidden;
+  }
+  /* Grain sutil — autenticidade, não dramaticidade */
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 20% 30%, var(--orange-warm) 0%, transparent 40%),
+                      radial-gradient(circle at 80% 70%, oklch(0.95 0.025 230) 0%, transparent 35%);
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  .hero .container-narrow { position: relative; display: grid; gap: 24px; }
+
+  .hero-eyebrow-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+  }
+  .hero-temporal {
+    font-family: var(--display);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .hero-temporal::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--orange);
+    border-radius: 50%;
+    animation: pulse 1.8s ease-in-out infinite;
+  }
+  .hero-temporal strong { color: var(--orange); font-weight: 800; }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.85); }
+  }
+
+  .hero-tag {
+    font-family: var(--display);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-muted);
+    padding: 4px 10px;
+    background: var(--paper-warm);
+    border-radius: 4px;
+  }
+
+  .hero-headline {
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: clamp(2.5rem, 6.8vw, 4.75rem);
+    line-height: 1.05;
+    max-width: 16ch;
+    letter-spacing: -0.032em;
+    margin-top: 4px;
+  }
+  .hero-headline em { font-style: normal; color: var(--orange); }
+  .hero-headline-accent { color: var(--orange-deep); }
+
+  .hero-sub {
+    font-family: var(--body);
+    font-size: clamp(1.0625rem, 2vw, 1.3125rem);
+    line-height: 1.5;
+    color: var(--ink-soft);
+    max-width: 50ch;
+    font-weight: 400;
+  }
+
+  .hero-cta-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+  }
+  .cta-primary {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 0.9375rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 18px 36px;
+    background: var(--orange);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 12px oklch(0.5 0.12 40 / 0.18);
+    min-height: 56px;
+  }
+  .cta-primary:hover {
+    background: var(--orange-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px oklch(0.5 0.12 40 / 0.25);
+  }
+  .cta-secondary {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--ink-soft);
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    transition: color 0.2s ease;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 2px;
+  }
+  .cta-secondary:hover { color: var(--orange); border-color: var(--orange); }
+
+  .hero-meta-compact {
+    display: flex;
+    gap: 32px;
+    padding-top: 24px;
+    margin-top: 12px;
+    border-top: 1px solid var(--line);
+    flex-wrap: wrap;
+  }
+  .hero-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .hero-meta-label {
+    font-family: var(--display);
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-faint);
+  }
+  .hero-meta-value {
+    font-family: var(--display);
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  /* ════════════════════════════════════════════
+     ACTIVITY CUES — prova social inicial discreta
+     ════════════════════════════════════════════ */
+  .activity-strip {
+    padding: 24px 0 32px;
+    border-top: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+    background: var(--paper);
+  }
+  .activity-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .activity-label {
+    font-family: var(--display);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-faint);
+  }
+  .activity-stats {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .activity-stat {
+    font-family: var(--display);
+    font-size: 0.8125rem;
+    color: var(--ink-soft);
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+  .activity-stat strong {
+    font-family: var(--display);
+    font-size: 1.0625rem;
+    font-weight: 800;
+    color: var(--ink);
+  }
+
+  /* ════════════════════════════════════════════
+     O QUE É — didática (intensidade contida)
+     ════════════════════════════════════════════ */
+  .what-is { padding: 80px 0; background: var(--paper-warm); }
+  .what-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+  .what-text p {
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    margin-bottom: 16px;
+  }
+  .what-text p strong { color: var(--ink); font-weight: 700; }
+  .what-stats { display: grid; gap: 16px; }
+  .stat-card {
+    padding: 20px 24px;
+    background: var(--paper);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+  .stat-number {
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: 2.25rem;
+    color: var(--orange);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .stat-label {
+    font-family: var(--body);
+    font-size: 0.9375rem;
+    color: var(--ink-soft);
+    line-height: 1.45;
+  }
+
+  /* ════════════════════════════════════════════
+     COMO FUNCIONA — cronologia explícita
+     ════════════════════════════════════════════ */
+  .how { padding: 96px 0; }
+  .day-tabs {
+    display: inline-flex;
+    background: var(--paper-warm);
+    border-radius: 10px;
+    padding: 4px;
+    margin-bottom: 40px;
+    gap: 4px;
+  }
+  .day-tab {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 10px 20px;
+    background: transparent;
+    border: none;
+    color: var(--ink-muted);
+    cursor: pointer;
+    border-radius: 7px;
+    transition: all 0.2s ease;
+  }
+  .day-tab.active {
+    background: var(--paper);
+    color: var(--ink);
+    box-shadow: 0 1px 3px oklch(0 0 0 / 0.06);
+  }
+  .day-tab span {
+    font-size: 0.6875rem;
+    color: var(--ink-muted);
+    margin-left: 4px;
+    font-weight: 500;
+  }
+  .day-tab.active span { color: var(--orange); }
+
+  .how-timeline { display: grid; gap: 0; }
+  .how-row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 48px;
+    padding: 28px 0;
+    border-top: 1px solid var(--line);
+    position: relative;
+  }
+  .how-row:last-child { border-bottom: 1px solid var(--line); }
+  .how-row.key-moment {
+    background: linear-gradient(90deg, var(--orange-soft) 0%, transparent 35%);
+    padding-left: 16px;
+    margin-left: -16px;
+    border-radius: 4px 0 0 4px;
+  }
+  .how-time {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 1.0625rem;
+    color: var(--ink);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .how-time-sub {
+    font-family: var(--display);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    color: var(--ink-muted);
+    margin-top: 4px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .key-moment .how-time-sub { color: var(--orange); }
+  .how-content h3 {
+    font-family: var(--display);
+    font-size: 1.1875rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    line-height: 1.2;
+  }
+  .key-chip {
+    font-family: var(--display);
+    font-size: 0.625rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--orange);
+    background: var(--orange-soft);
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+  .how-content p {
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+
+  /* ════════════════════════════════════════════
+     QUOTE-BREAK 1 — Individual (escalando)
+     ════════════════════════════════════════════ */
+  .quote-break {
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .quote-break-warm {
+    background: var(--paper-warmer);
+  }
+  .quote-break-deep {
+    background: var(--paper-deep);
+  }
+  .quote-break .container-narrow { position: relative; }
+
+  .quote-break-eyebrow {
+    font-family: var(--display);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--orange-deep);
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .quote-break-eyebrow::before {
+    content: '';
+    width: 32px;
+    height: 2px;
+    background: var(--orange);
+  }
+
+  .quote-break-text {
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: clamp(2rem, 5vw, 3.75rem);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+    max-width: 22ch;
+  }
+  .quote-break-text em { font-style: normal; color: var(--orange); }
+  .quote-break-text .accent {
+    background: linear-gradient(180deg, transparent 65%, var(--orange-soft) 65%);
+  }
+
+  .quote-break-context {
+    font-family: var(--display);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-muted);
+    margin-top: 32px;
+  }
+
+  /* ════════════════════════════════════════════
+     PARA QUEM É — afirmação → objeção
+     ════════════════════════════════════════════ */
+  .for-who { padding: 96px 0; background: var(--paper); }
+
+  .perfil-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 56px;
+    padding: 32px;
+    background: var(--paper-warm);
+    border-radius: 12px;
+  }
+  .perfil-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-family: var(--display);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.4;
+  }
+  .perfil-item::before {
+    content: '→';
+    color: var(--orange);
+    font-weight: 800;
+    flex-shrink: 0;
+    font-size: 1.125rem;
+  }
+
+  .barriers-divider {
+    text-align: center;
+    margin-bottom: 32px;
+    position: relative;
+  }
+  .barriers-divider span {
+    font-family: var(--display);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-muted);
+    padding: 0 16px;
+    background: var(--paper);
+    position: relative;
+    z-index: 1;
+  }
+  .barriers-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--line);
+    z-index: 0;
+  }
+
+  .barriers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .barrier-card {
+    padding: 32px;
+    background: var(--paper-warm);
+    border-radius: 12px;
+  }
+  .barrier-question {
+    font-family: var(--body);
+    font-style: italic;
+    font-size: 1.0625rem;
+    color: var(--ink-muted);
+    margin-bottom: 14px;
+    line-height: 1.4;
+  }
+  .barrier-answer {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+  .barrier-answer strong { color: var(--orange-deep); font-weight: 800; }
+
+  .barrier-bridge {
+    margin-top: 32px;
+    padding: 20px;
+    background: var(--paper-warm);
+    border-radius: 10px;
+    text-align: center;
+    font-family: var(--body);
+    font-size: 0.9375rem;
+    color: var(--ink-soft);
+  }
+  .barrier-bridge a {
+    color: var(--orange);
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1.5px solid var(--orange);
+  }
+
+  /* ════════════════════════════════════════════
+     COMO É ESTAR LÁ — galeria de bastidores
+     ════════════════════════════════════════════ */
+  .vibe { padding: 144px 0; background: var(--paper); }
+
+  .vibe-header {
+    margin-bottom: 56px;
+    max-width: 720px;
+  }
+  .vibe-headline {
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+    max-width: 18ch;
+  }
+  .vibe-headline em { font-style: normal; color: var(--orange); }
+  .vibe-sub {
+    font-family: var(--body);
+    font-size: 1.125rem;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    margin-top: 20px;
+    max-width: 48ch;
+  }
+
+  /* Mosaico assimétrico — feed real, não grid */
+  .vibe-mosaic {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 140px;
+    gap: 12px;
+  }
+  .vibe-photo {
+    background: linear-gradient(135deg, var(--paper-warmer), var(--paper-warm) 60%, var(--paper));
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 16px;
+  }
+  .vibe-photo::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 50%, oklch(0 0 0 / 0.5) 100%);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .vibe-photo-caption {
+    font-family: var(--display);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    line-height: 1.3;
+    position: relative;
+    z-index: 2;
+  }
+  .vibe-photo-placeholder {
+    position: absolute;
+    inset: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--display);
+    font-size: 0.6875rem;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    text-align: center;
+    border: 1px dashed var(--line);
+    border-radius: 6px;
+    z-index: 0;
+    line-height: 1.4;
+  }
+
+  /* Layout assimétrico das fotos */
+  .vibe-photo:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+  .vibe-photo:nth-child(2) { grid-column: span 2; grid-row: span 1; }
+  .vibe-photo:nth-child(3) { grid-column: span 2; grid-row: span 1; }
+  .vibe-photo:nth-child(4) { grid-column: span 2; grid-row: span 1; }
+  .vibe-photo:nth-child(5) { grid-column: span 2; grid-row: span 2; }
+  .vibe-photo:nth-child(6) { grid-column: span 3; grid-row: span 1; }
+  .vibe-photo:nth-child(7) { grid-column: span 3; grid-row: span 1; }
+
+  .vibe-meta {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--display);
+    font-size: 0.75rem;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+  }
+  .vibe-meta::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--line);
+  }
+
+  /* ════════════════════════════════════════════
+     BLOG — ponte de conteúdo
+     ════════════════════════════════════════════ */
+  .blog { padding: 96px 0; background: var(--paper-warm); }
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 32px;
+  }
+  .blog-card {
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--paper);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+  }
+  .blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px oklch(0 0 0 / 0.06);
+  }
+  .blog-image {
+    aspect-ratio: 16/10;
+    background: linear-gradient(135deg, var(--paper-warm), var(--paper-warmer));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--display);
+    font-size: 0.6875rem;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+  }
+  .blog-content { padding: 24px; }
+  .blog-meta {
+    font-family: var(--display);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--orange);
+    margin-bottom: 12px;
+  }
+  .blog-title {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 1.0625rem;
+    line-height: 1.3;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+  .blog-excerpt {
+    font-family: var(--body);
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--ink-muted);
+  }
+
+  /* ════════════════════════════════════════════
+     O QUE VOCÊ LEVA — pico emocional
+     ════════════════════════════════════════════ */
+  .takeaway { padding: 120px 0; background: var(--paper); }
+  .takeaway-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 32px;
+  }
+  .takeaway-item {
+    padding: 32px;
+    background: var(--paper-warm);
+    border-radius: 12px;
+  }
+  .takeaway-num {
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: 0.75rem;
+    color: var(--orange);
+    letter-spacing: 0.15em;
+    margin-bottom: 16px;
+    display: block;
+  }
+  .takeaway-title {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 1.1875rem;
+    margin-bottom: 12px;
+    line-height: 1.25;
+  }
+  .takeaway-desc {
+    font-family: var(--body);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+
+  /* ════════════════════════════════════════════
+     MENTORES — Facilitador / Mentores / Jurados
+     ════════════════════════════════════════════ */
+  .mentors { padding: 80px 0; background: var(--paper-warm); }
+  .mentors-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--line);
+  }
+  .tab {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 14px 24px;
+    background: none;
+    border: none;
+    color: var(--ink-muted);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+  .tab.active { color: var(--orange); border-bottom-color: var(--orange); }
+  .tab:hover:not(.active) { color: var(--ink-soft); }
+  .tab-count {
+    font-family: var(--display);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: var(--ink-muted);
+    margin-left: 6px;
+  }
+
+  .facilitator-card {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 32px;
+    padding: 32px;
+    background: var(--paper);
+    border-radius: 12px;
+    align-items: center;
+  }
+  .facilitator-photo {
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, var(--paper-warmer), var(--paper-warm));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--display);
+    font-size: 0.6875rem;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.4;
+    padding: 12px;
+  }
+  .facilitator-info h3 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+  }
+  .facilitator-role {
+    font-family: var(--display);
+    font-size: 0.75rem;
+    color: var(--blue);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 16px;
+  }
+  .facilitator-bio {
+    font-family: var(--body);
+    font-size: 1rem;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    max-width: 60ch;
+  }
+
+  /* ════════════════════════════════════════════
+     LOCAL — racional
+     ════════════════════════════════════════════ */
+  .venue { padding: 80px 0; background: var(--paper); }
+  .venue-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 64px;
+    align-items: center;
+  }
+  .venue-image {
+    aspect-ratio: 4/3;
+    background: linear-gradient(135deg, var(--paper-warmer) 0%, var(--paper-warm) 50%, var(--paper) 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--display);
+    font-size: 0.75rem;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .venue-info h3 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+  .venue-address {
+    font-family: var(--body);
+    font-size: 1rem;
+    color: var(--ink-soft);
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+  .venue-features { display: grid; gap: 12px; list-style: none; }
+  .venue-features li {
+    display: flex;
+    gap: 12px;
+    font-size: 0.9375rem;
+    color: var(--ink-soft);
+    line-height: 1.4;
+  }
+  .venue-features li::before {
+    content: '→';
+    color: var(--orange);
+    font-weight: 700;
+    font-family: var(--display);
+  }
+
+  /* ════════════════════════════════════════════
+     EDIÇÕES ANTERIORES — testimonials reais
+     ════════════════════════════════════════════ */
+  .past { padding: 144px 0; background: var(--paper-warm); }
+
+  .past-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding: 32px 0;
+    margin-bottom: 64px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .past-stat { text-align: center; }
+  .past-stat-num {
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: 2.75rem;
+    color: var(--orange);
+    line-height: 1;
+    margin-bottom: 4px;
+    letter-spacing: -0.02em;
+  }
+  .past-stat-label {
+    font-family: var(--display);
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .testimonial-card {
+    padding: 32px;
+    background: var(--paper);
+    border-radius: 12px;
+  }
+  .testimonial-quote {
+    font-family: var(--body);
+    font-style: italic;
+    font-size: 1.0625rem;
+    line-height: 1.55;
+    color: var(--ink);
+    margin-bottom: 24px;
+  }
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .testimonial-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--paper-warmer), var(--paper-warm));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--display);
+    font-size: 0.6875rem;
+    color: var(--ink-faint);
+    font-weight: 700;
+    flex-shrink: 0;
+    border: 1px dashed var(--line);
+  }
+  .testimonial-info { display: flex; flex-direction: column; gap: 2px; }
+  .testimonial-name {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 0.9375rem;
+    color: var(--ink);
+  }
+  .testimonial-role {
+    font-family: var(--body);
+    font-size: 0.8125rem;
+    color: var(--ink-muted);
+    line-height: 1.3;
+  }
+  .testimonial-result {
+    font-family: var(--display);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--orange);
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line-soft);
+  }
+
+  /* ════════════════════════════════════════════
+     INSCRIÇÕES — momento de decisão
+     ════════════════════════════════════════════ */
+  .pricing { padding: 120px 0; background: var(--paper); }
+  .pricing .container-narrow { text-align: center; }
+  .pricing .eyebrow { justify-content: center; }
+
+  .urgency-bar {
+    max-width: 520px;
+    margin: 32px auto 24px;
+    padding: 16px 24px;
+    background: var(--orange-soft);
+    border-radius: 10px;
+    text-align: left;
+  }
+  .urgency-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 10px;
+    font-family: var(--display);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .urgency-top strong { color: var(--orange-deep); font-weight: 800; }
+  .urgency-progress {
+    height: 6px;
+    background: oklch(0.95 0.02 50);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .urgency-fill {
+    height: 100%;
+    width: 64%;
+    background: var(--orange);
+    border-radius: 3px;
+  }
+  .urgency-bottom {
+    margin-top: 8px;
+    font-family: var(--display);
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+    letter-spacing: 0.04em;
+  }
+
+  .pricing-card {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 40px;
+    background: var(--paper);
+    border: 2px solid var(--orange);
+    border-radius: 16px;
+    text-align: left;
+    box-shadow: 0 8px 32px oklch(0.5 0.12 40 / 0.12);
+  }
+  .price-tag {
+    font-family: var(--display);
+    font-size: 0.6875rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--paper);
+    background: var(--ink);
+    padding: 6px 12px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 16px;
+  }
+  .price-value {
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: 3.5rem;
+    line-height: 1;
+    color: var(--ink);
+    margin-bottom: 4px;
+    letter-spacing: -0.025em;
+  }
+  .price-value sup {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--ink-muted);
+    margin-right: 4px;
+  }
+  .price-meta {
+    font-size: 0.875rem;
+    color: var(--ink-muted);
+    margin-bottom: 32px;
+  }
+  .price-includes {
+    list-style: none;
+    margin-bottom: 32px;
+    display: grid;
+    gap: 10px;
+  }
+  .price-includes li {
+    display: flex;
+    gap: 12px;
+    font-size: 0.9375rem;
+    color: var(--ink-soft);
+    line-height: 1.4;
+  }
+  .price-includes li::before {
+    content: '✓';
+    color: var(--orange);
+    font-weight: 800;
+    font-family: var(--display);
+  }
+  .price-cta {
+    width: 100%;
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 0.9375rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 18px;
+    background: var(--orange);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    min-height: 56px;
+  }
+  .price-cta:hover { background: var(--orange-dark); }
+
+  /* ════════════════════════════════════════════
+     PATROCINADORES — 3 NÍVEIS
+     ════════════════════════════════════════════ */
+  .sponsors { padding: 80px 0; background: var(--paper-warm); }
+  .sponsor-tier { margin-bottom: 56px; }
+  .sponsor-tier:last-child { margin-bottom: 0; }
+  .sponsor-tier-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .sponsor-tier-label {
+    font-family: var(--display);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink);
+  }
+  .sponsor-tier-line {
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+  }
+  .sponsor-tier-badge {
+    font-family: var(--display);
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 4px 10px;
+    border-radius: 4px;
+  }
+  .sponsor-tier-badge--global { background: var(--orange); color: #fff; }
+  .sponsor-tier-badge--state  { background: var(--blue); color: #fff; }
+  .sponsor-tier-badge--local  { background: var(--paper); color: var(--ink); border: 1px solid var(--line); }
+
+  .sponsor-grid { display: grid; gap: 20px; }
+  .sponsor-grid--global { grid-template-columns: repeat(3, 1fr); }
+  .sponsor-grid--state  { grid-template-columns: repeat(4, 1fr); }
+  .sponsor-grid--local  { grid-template-columns: repeat(5, 1fr); }
+  .sponsor-slot {
+    aspect-ratio: 16/9;
+    background: var(--paper);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--display);
+    font-size: 0.6875rem;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+  }
+  .sponsor-slot:hover { transform: translateY(-2px); }
+
+  /* ════════════════════════════════════════════
+     FAQ — acordeão
+     ════════════════════════════════════════════ */
+  .faq { padding: 80px 0; background: var(--paper); }
+  .faq-list { max-width: 800px; margin: 0 auto; }
+  .faq-item { border-bottom: 1px solid var(--line); }
+  .faq-q {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 1.0625rem;
+    color: var(--ink);
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    list-style: none;
+    transition: color 0.2s ease;
+  }
+  .faq-q:hover { color: var(--orange); }
+  .faq-q::-webkit-details-marker { display: none; }
+  .faq-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--orange-soft);
+    color: var(--orange);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+  details[open] .faq-icon { transform: rotate(45deg); }
+  .faq-q-text { flex: 1; }
+  .faq-a {
+    font-family: var(--body);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    padding: 0 0 24px 40px;
+  }
+
+  /* ════════════════════════════════════════════
+     CTA FINAL — pico emocional + temporalidade
+     ════════════════════════════════════════════ */
+  .final-cta {
+    padding: 144px 0;
+    background: var(--paper-deep);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .final-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 30% 20%, var(--orange-soft) 0%, transparent 50%),
+                      radial-gradient(circle at 70% 80%, oklch(0.92 0.03 230) 0%, transparent 45%);
+    opacity: 0.7;
+    pointer-events: none;
+  }
+  .final-cta .container-narrow { position: relative; }
+
+  .final-cta-temporal {
+    font-family: var(--display);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--orange-deep);
+    margin-bottom: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .final-cta-temporal::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--orange);
+    border-radius: 50%;
+    animation: pulse 1.8s ease-in-out infinite;
+  }
+
+  .final-cta-headline {
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: clamp(2.25rem, 5vw, 3.75rem);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+    max-width: 18ch;
+    margin: 0 auto 24px;
+  }
+  .final-cta-headline em { font-style: normal; color: var(--orange); }
+  .final-cta-sub {
+    font-family: var(--body);
+    font-size: 1.125rem;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    max-width: 48ch;
+    margin: 0 auto 40px;
+  }
+
+  /* ════════════════════════════════════════════
+     STICKY MOBILE CTA
+     ════════════════════════════════════════════ */
+  .mobile-sticky-cta {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px 16px;
+    background: var(--paper);
+    border-top: 1px solid var(--line);
+    z-index: 90;
+    box-shadow: 0 -4px 16px oklch(0 0 0 / 0.06);
+  }
+  .mobile-sticky-cta button {
+    width: 100%;
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 0.9375rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 16px;
+    background: var(--orange);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    min-height: 52px;
+  }
+
+  /* ════════════════════════════════════════════
+     FOOTER
+     ════════════════════════════════════════════ */
+  footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 64px 0 32px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+  }
+  .footer-brand {
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .footer-brand span { color: var(--orange); }
+  .footer-tagline {
+    font-family: var(--body);
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: oklch(0.7 0.01 60);
+    max-width: 36ch;
+  }
+  .footer-col h4 {
+    font-family: var(--display);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--orange);
+    margin-bottom: 16px;
+  }
+  .footer-col ul { list-style: none; display: grid; gap: 10px; }
+  .footer-col li, .footer-col a {
+    font-family: var(--body);
+    font-size: 0.9375rem;
+    color: oklch(0.85 0.01 60);
+    text-decoration: none;
+    line-height: 1.5;
+  }
+  .footer-col a:hover { color: var(--orange); }
+  .footer-bottom {
+    border-top: 1px solid oklch(0.3 0.01 60);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .footer-copy {
+    font-family: var(--display);
+    font-size: 0.75rem;
+    color: oklch(0.6 0.01 60);
+    letter-spacing: 0.04em;
+  }
+
+  /* ════════════════════════════════════════════
+     RESPONSIVE
+     ════════════════════════════════════════════ */
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .nav-cta { display: none; }
+    .mobile-sticky-cta { display: block; }
+    body { padding-bottom: 80px; }
+
+    .container, .container-narrow { padding: 0 20px; }
+    .what-grid, .venue-grid { grid-template-columns: 1fr; gap: 32px; }
+    .barriers-grid, .takeaway-grid, .blog-grid, .testimonials-grid {
+      grid-template-columns: 1fr;
+    }
+    .perfil-row { grid-template-columns: repeat(2, 1fr); }
+    .past-stats { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .how-row { grid-template-columns: 1fr; gap: 12px; }
+
+    .sponsor-grid--global { grid-template-columns: repeat(2, 1fr); }
+    .sponsor-grid--state  { grid-template-columns: repeat(2, 1fr); }
+    .sponsor-grid--local  { grid-template-columns: repeat(3, 1fr); }
+
+    .facilitator-card { grid-template-columns: 1fr; }
+    .day-tabs { width: 100%; overflow-x: auto; }
+
+    .vibe-mosaic {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 120px;
+    }
+    .vibe-photo:nth-child(n) {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+    .vibe-photo:nth-child(1),
+    .vibe-photo:nth-child(5) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    .activity-row { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .hero-meta-compact { gap: 20px; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="mockup-banner">
+    Mockup v3 · SW Timbó 2026 · <span>Refinamento Estratégico</span>
+  </div>
+
+  <!-- ═══════════════ NAV ═══════════════ -->
+  <div class="nav-wrapper">
+    <span class="section-tag">Nav · Sticky</span>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#" class="nav-brand">Startup Weekend<br /><span>Timbó</span></a>
+      <ul class="nav-links">
+        <li><a href="#o-que-e">O evento</a></li>
+        <li><a href="#como-funciona">Como funciona</a></li>
+        <li><a href="#mentores">Mentores</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <button class="nav-cta">Inscreva-se</button>
+    </nav>
+  </div>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <header class="hero" role="banner">
+    <span class="section-tag">Hero · Acessível</span>
+    <div class="container-narrow">
+      <div class="hero-eyebrow-row">
+        <span class="hero-temporal">A próxima edição começa em <strong>102 dias</strong></span>
+        <span class="hero-tag">Techstars · 4ª edição</span>
+      </div>
+
+      <h1 class="hero-headline">
+        54 horas para tirar uma <em>ideia do papel</em> e descobrir do que você é capaz.
+      </h1>
+
+      <p class="hero-sub">
+        Traga sua ideia ou escolha uma das melhores no primeiro dia. Forme um time, construa com mentores e apresente para jurados no domingo. <strong>Empreender na prática, em um fim de semana, no Vale do Itajaí.</strong>
+      </p>
+
+      <div class="hero-cta-row">
+        <button class="cta-primary">Quero participar</button>
+        <a class="cta-secondary">Ver como é estar lá ↓</a>
+      </div>
+
+      <div class="hero-meta-compact">
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Quando</span>
+          <span class="hero-meta-value">14 — 16 ago 2026</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Onde</span>
+          <span class="hero-meta-value">CET · Timbó · SC</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Duração</span>
+          <span class="hero-meta-value">54 horas</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Pré-requisito</span>
+          <span class="hero-meta-value">Nenhum</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════ ACTIVITY STRIP — prova social discreta ═══════════════ -->
+  <section class="activity-strip" aria-label="Última edição">
+    <span class="section-tag">Activity · Prova</span>
+    <div class="container">
+      <div class="activity-row">
+        <span class="activity-label">Última edição em números</span>
+        <div class="activity-stats">
+          <span class="activity-stat"><strong>34</strong> participantes</span>
+          <span class="activity-stat"><strong>28</strong> ideias na sexta</span>
+          <span class="activity-stat"><strong>7</strong> times finalistas</span>
+          <span class="activity-stat"><strong>3</strong> projetos seguem ativos</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ O QUE É — didática ═══════════════ -->
+  <section id="o-que-e" class="what-is" aria-labelledby="what-is-title">
+    <span class="section-tag">O que é · Didática</span>
+    <div class="container">
+      <div class="eyebrow">O evento</div>
+      <h2 id="what-is-title" class="section-title">Um fim de semana para experimentar, na prática, o que é <em>empreender.</em></h2>
+
+      <div class="what-grid">
+        <div class="what-text">
+          <p>O <strong>Startup Weekend</strong> é uma imersão de 54 horas onde pessoas com diferentes formações se juntam para tirar uma ideia do papel.</p>
+          <p>Você vai vivenciar o ciclo completo de criação de uma startup: <strong>identificar uma oportunidade, formar um time, validar com clientes, construir um produto e apresentar para jurados</strong> — tudo em um fim de semana.</p>
+          <p>Criado pela <strong>Techstars</strong> e presente em mais de 150 países, é a forma mais rápida e acessível de descobrir, na prática, se empreender é pra você.</p>
+        </div>
+        <div class="what-stats">
+          <div class="stat-card">
+            <div class="stat-number">150+</div>
+            <div class="stat-label">países onde o Startup Weekend já aconteceu</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">+1M</div>
+            <div class="stat-label">pessoas já participaram globalmente</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">70%</div>
+            <div class="stat-label">dos participantes nunca empreenderam antes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ COMO FUNCIONA ═══════════════ -->
+  <section id="como-funciona" class="how" aria-labelledby="how-title">
+    <span class="section-tag">Como funciona · Cronologia</span>
+    <div class="container">
+      <div class="eyebrow">As 54 horas, hora a hora</div>
+      <h2 id="how-title" class="section-title">O que acontece em cada momento do <em>fim de semana.</em></h2>
+      <p class="section-intro">Um cronograma desenhado para te levar do zero ao pitch sem precisar saber nada antes de chegar.</p>
+
+      <div class="day-tabs" role="tablist">
+        <button class="day-tab active">Sexta <span>· 14/08</span></button>
+        <button class="day-tab">Sábado <span>· 15/08</span></button>
+        <button class="day-tab">Domingo <span>· 16/08</span></button>
+      </div>
+
+      <div class="how-timeline">
+        <div class="how-row">
+          <div>
+            <div class="how-time">19h</div>
+            <div class="how-time-sub">Abertura</div>
+          </div>
+          <div class="how-content">
+            <h3>Networking, jantar e quebra-gelo</h3>
+            <p>Você chega, se apresenta e conhece outras pessoas curiosas como você. Sem hierarquia, sem palco, sem pressão.</p>
+          </div>
+        </div>
+        <div class="how-row key-moment">
+          <div>
+            <div class="how-time">20h30</div>
+            <div class="how-time-sub">Momento chave</div>
+          </div>
+          <div class="how-content">
+            <h3>Pitches de 60 segundos <span class="key-chip">Você decide se sobe</span></h3>
+            <p>Quem tem uma ideia sobe no palco e tem 60 segundos pra apresentar. Não tem ideia? Sem problema. Você ainda vai escolher uma para trabalhar.</p>
+          </div>
+        </div>
+        <div class="how-row key-moment">
+          <div>
+            <div class="how-time">21h30</div>
+            <div class="how-time-sub">Momento chave</div>
+          </div>
+          <div class="how-content">
+            <h3>Votação e formação dos times <span class="key-chip">Onde o time nasce</span></h3>
+            <p>O grupo vota nas ideias mais promissoras. Os times se formam ao redor das vencedoras. Em 30 minutos, você passa de plateia a co-fundador.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ QUOTE-BREAK 1 — Individual ═══════════════ -->
+  <section class="quote-break quote-break-warm" aria-label="Momento marcante 1">
+    <span class="section-tag">Quote-break · Individual</span>
+    <div class="container-narrow">
+      <div class="quote-break-eyebrow">Sexta-feira · 21h32</div>
+      <p class="quote-break-text">
+        Você acabou de votar numa ideia. Em <span class="accent">2 minutos</span>, ela vira <em>o seu projeto.</em>
+      </p>
+      <div class="quote-break-context">O time que você nem conhecia ainda agora é o seu time.</div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PARA QUEM É ═══════════════ -->
+  <section class="for-who" aria-labelledby="for-who-title">
+    <span class="section-tag">Para quem é</span>
+    <div class="container">
+      <div class="eyebrow">É pra você</div>
+      <h2 id="for-who-title" class="section-title">Você se reconhece em <em>algum desses?</em></h2>
+
+      <div class="perfil-row">
+        <div class="perfil-item">Universitário ou recém-formado curioso sobre empreender</div>
+        <div class="perfil-item">Profissional CLT pensando em uma transição</div>
+        <div class="perfil-item">Tem uma ideia que quer validar rápido</div>
+        <div class="perfil-item">Quer fazer parte da rede empreendedora do Vale</div>
+      </div>
+
+      <div class="barriers-divider">
+        <span>E se você ainda tem dúvidas...</span>
+      </div>
+
+      <div class="barriers-grid">
+        <div class="barrier-card">
+          <div class="barrier-question">"Não tenho uma ideia pronta."</div>
+          <div class="barrier-answer">Não tem problema. Na sexta, todo mundo apresenta ideias e o grupo vota nas melhores. Você escolhe em <strong>qual time entrar</strong>.</div>
+        </div>
+        <div class="barrier-card">
+          <div class="barrier-question">"Não sou da área de tecnologia ou negócios."</div>
+          <div class="barrier-answer">Os melhores times são mistos. <strong>Designer, dev, marketing, RH, vendas, obra</strong> — todos somam.</div>
+        </div>
+        <div class="barrier-card">
+          <div class="barrier-question">"Nunca empreendi na vida."</div>
+          <div class="barrier-answer"><strong>70% dos participantes</strong> também nunca empreenderam. É exatamente para isso que o evento serve.</div>
+        </div>
+        <div class="barrier-card">
+          <div class="barrier-question">"E se a ideia que eu trouxer for ruim?"</div>
+          <div class="barrier-answer">Melhor descobrir em <strong>54 horas</strong> do que em 5 anos. O SW é o lugar mais barato e rápido de errar — e aprender.</div>
+        </div>
+      </div>
+
+      <div class="barrier-bridge">
+        Ainda em dúvida? <a href="#blog">Leia "Cheguei sem ideia": 3 histórias de quem participou →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ COMO É ESTAR LÁ — humanidade visual ═══════════════ -->
+  <section class="vibe" aria-labelledby="vibe-title">
+    <span class="section-tag">Como é estar lá · NOVO</span>
+    <div class="container">
+      <div class="vibe-header">
+        <h2 id="vibe-title" class="vibe-headline">
+          Não dá pra explicar.<br/><em>Dá pra mostrar.</em>
+        </h2>
+        <p class="vibe-sub">
+          54 horas no CET, em Timbó. Pessoas que não se conheciam na sexta, construindo coisas juntas no domingo. Edição 2025.
+        </p>
+      </div>
+
+      <div class="vibe-mosaic">
+        <div class="vibe-photo">
+          <div class="vibe-photo-placeholder">[ Foto edição 2025 ·<br/>grupo trabalhando<br/>na mesa ]</div>
+          <div class="vibe-photo-caption">Sábado · 22h · validação</div>
+        </div>
+        <div class="vibe-photo">
+          <div class="vibe-photo-placeholder">[ Foto pitches<br/>sexta-feira ]</div>
+          <div class="vibe-photo-caption">Sexta · 60s pitches</div>
+        </div>
+        <div class="vibe-photo">
+          <div class="vibe-photo-placeholder">[ Foto post-its<br/>na parede ]</div>
+          <div class="vibe-photo-caption">Sábado · brainstorm</div>
+        </div>
+        <div class="vibe-photo">
+          <div class="vibe-photo-placeholder">[ Foto mentoria<br/>roda de conversa ]</div>
+          <div class="vibe-photo-caption">Sábado · mentoria</div>
+        </div>
+        <div class="vibe-photo">
+          <div class="vibe-photo-placeholder">[ Foto pitch final<br/>no palco ]</div>
+          <div class="vibe-photo-caption">Domingo · 18h · pitch final</div>
+        </div>
+        <div class="vibe-photo">
+          <div class="vibe-photo-placeholder">[ Foto plateia<br/>aplaudindo ]</div>
+          <div class="vibe-photo-caption">Domingo · banca de jurados</div>
+        </div>
+        <div class="vibe-photo">
+          <div class="vibe-photo-placeholder">[ Foto time<br/>comemorando ]</div>
+          <div class="vibe-photo-caption">Domingo · 21h · final</div>
+        </div>
+      </div>
+
+      <div class="vibe-meta">Fotos da edição 2025 · Timbó/SC</div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ BLOG — ponte ═══════════════ -->
+  <section id="blog" class="blog" aria-labelledby="blog-title">
+    <span class="section-tag">Blog</span>
+    <div class="container">
+      <div class="eyebrow">Blog</div>
+      <h2 id="blog-title" class="section-title">Conteúdo para <em>quem está chegando agora.</em></h2>
+      <p class="section-intro">Histórias de quem já passou pelo SW, dicas para se preparar e referências sobre empreendedorismo no Vale do Itajaí.</p>
+
+      <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-image">[ Imagem do post ]</div>
+          <div class="blog-content">
+            <div class="blog-meta">Como se preparar · 6 min</div>
+            <h3 class="blog-title">O que levar (e o que não levar) na sua mochila para o Startup Weekend</h3>
+            <p class="blog-excerpt">Um checklist prático com tudo que você precisa para aproveitar o fim de semana sem perder tempo com logística.</p>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-image">[ Imagem do post ]</div>
+          <div class="blog-content">
+            <div class="blog-meta">Histórias · 8 min</div>
+            <h3 class="blog-title">"Cheguei sem ideia": 3 histórias de quem participou sem saber o que esperar</h3>
+            <p class="blog-excerpt">Conversamos com participantes da edição anterior que vieram sem ideia e saíram com um produto, um time e um projeto em andamento.</p>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-image">[ Imagem do post ]</div>
+          <div class="blog-content">
+            <div class="blog-meta">Sobre o evento · 5 min</div>
+            <h3 class="blog-title">Como funciona o pitch de 60 segundos da sexta-feira</h3>
+            <p class="blog-excerpt">A regra mais importante (e mais simples) do Startup Weekend explicada com exemplos reais de pitches que funcionaram.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ O QUE VOCÊ LEVA ═══════════════ -->
+  <section class="takeaway" aria-labelledby="takeaway-title">
+    <span class="section-tag">O que você leva</span>
+    <div class="container">
+      <div class="eyebrow">Ao final do domingo</div>
+      <h2 id="takeaway-title" class="section-title">Você sai com mais do que <em>chegou.</em></h2>
+
+      <div class="takeaway-grid">
+        <div class="takeaway-item">
+          <span class="takeaway-num">01</span>
+          <h3 class="takeaway-title">Experiência prática de empreender</h3>
+          <p class="takeaway-desc">Ciclo completo vivido: ideia, validação, construção, pitch. Em um fim de semana, você condensa meses de aprendizado.</p>
+        </div>
+        <div class="takeaway-item">
+          <span class="takeaway-num">02</span>
+          <h3 class="takeaway-title">Uma rede regional real</h3>
+          <p class="takeaway-desc">Você sai conhecendo dezenas de pessoas do Vale do Itajaí que querem construir coisas — futuros sócios, clientes, mentores.</p>
+        </div>
+        <div class="takeaway-item">
+          <span class="takeaway-num">03</span>
+          <h3 class="takeaway-title">Clareza sobre seu próximo passo</h3>
+          <p class="takeaway-desc">Você descobre, na prática, se empreender é pra você. E qual papel mais combina com seu jeito.</p>
+        </div>
+        <div class="takeaway-item">
+          <span class="takeaway-num">04</span>
+          <h3 class="takeaway-title">Feedback real de mentores e jurados</h3>
+          <p class="takeaway-desc">Empreendedores experientes, investidores e profissionais do mercado dão feedback direto sobre o que você construiu.</p>
+        </div>
+        <div class="takeaway-item">
+          <span class="takeaway-num">05</span>
+          <h3 class="takeaway-title">Certificado oficial Techstars</h3>
+          <p class="takeaway-desc">Comprovante reconhecido internacionalmente — válido para currículo, LinkedIn, portfólio.</p>
+        </div>
+        <div class="takeaway-item">
+          <span class="takeaway-num">06</span>
+          <h3 class="takeaway-title">Premiações para os melhores</h3>
+          <p class="takeaway-desc">Os times campeões recebem prêmios dos patrocinadores — créditos em serviços, mentorias, espaço de coworking.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ QUOTE-BREAK 2 — Coletivo (PICO) ═══════════════ -->
+  <section class="quote-break quote-break-deep" aria-label="Momento marcante 2">
+    <span class="section-tag">Quote-break · Coletivo</span>
+    <div class="container-narrow">
+      <div class="quote-break-eyebrow">Em 54 horas</div>
+      <p class="quote-break-text">
+        Sexta de manhã: <span class="accent">50 estranhos.</span><br/>
+        Domingo à noite: <em>7 times.</em>
+      </p>
+      <div class="quote-break-context">É isso que acontece quando você bota gente curiosa na mesma sala.</div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ MENTORES ═══════════════ -->
+  <section id="mentores" class="mentors" aria-labelledby="mentors-title">
+    <span class="section-tag">Mentores</span>
+    <div class="container">
+      <div class="eyebrow">Quem está com você</div>
+      <h2 id="mentors-title" class="section-title">Quem <em>já trilhou</em> esse caminho.</h2>
+      <p class="section-intro">Empreendedores, investidores e profissionais do Vale do Itajaí e do Brasil, voluntários para te acompanhar nas 54 horas.</p>
+
+      <div class="mentors-tabs" role="tablist">
+        <button class="tab active">Facilitador <span class="tab-count">· 1</span></button>
+        <button class="tab">Mentores <span class="tab-count">· 12</span></button>
+        <button class="tab">Jurados <span class="tab-count">· 5</span></button>
+      </div>
+
+      <div class="facilitator-card">
+        <div class="facilitator-photo">[ Foto do<br/>Facilitador ]</div>
+        <div class="facilitator-info">
+          <h3>Nome do Facilitador</h3>
+          <div class="facilitator-role">Facilitador certificado Techstars</div>
+          <div class="facilitator-bio">[REVISAR · placeholder] Conduz o evento do início ao fim, garantindo que cada momento das 54 horas funcione como deveria. Já facilitou X edições do Startup Weekend em diferentes cidades. Bio curta com experiência relevante e perfil profissional.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ LOCAL ═══════════════ -->
+  <section class="venue" aria-labelledby="venue-title">
+    <span class="section-tag">Local</span>
+    <div class="container">
+      <div class="eyebrow">Onde acontece</div>
+      <h2 id="venue-title" class="section-title">No coração de Timbó, com toda a estrutura para os <em>3 dias.</em></h2>
+
+      <div class="venue-grid">
+        <div class="venue-image">[ Foto / mapa do CET ]</div>
+        <div class="venue-info">
+          <h3>CET — Centro Empresarial de Timbó</h3>
+          <p class="venue-address">R. Duque de Caxias, 830 — Centro<br/>Timbó · SC · CEP 89120-000</p>
+          <ul class="venue-features">
+            <li>Sala principal para abertura e pitches finais</li>
+            <li>Salas de trabalho separadas para cada time</li>
+            <li>Wi-Fi de alta velocidade durante todo o evento</li>
+            <li>Café, água e lanches o tempo todo</li>
+            <li>Refeições inclusas (jantar de sexta, almoço e jantar de sábado, almoço de domingo)</li>
+            <li>Estacionamento gratuito no local</li>
+            <li>Acessibilidade para pessoas com deficiência</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ EDIÇÕES ANTERIORES — testimonials ═══════════════ -->
+  <section class="past" aria-labelledby="past-title">
+    <span class="section-tag">Edições anteriores · Testimonials</span>
+    <div class="container">
+      <div class="eyebrow">Quem já passou por aqui</div>
+      <h2 id="past-title" class="section-title">A última edição em <em>números reais.</em></h2>
+
+      <div class="past-stats">
+        <div class="past-stat">
+          <div class="past-stat-num">34</div>
+          <div class="past-stat-label">Participantes</div>
+        </div>
+        <div class="past-stat">
+          <div class="past-stat-num">28</div>
+          <div class="past-stat-label">Ideias apresentadas</div>
+        </div>
+        <div class="past-stat">
+          <div class="past-stat-num">7</div>
+          <div class="past-stat-label">Protótipos finais</div>
+        </div>
+        <div class="past-stat">
+          <div class="past-stat-num">4</div>
+          <div class="past-stat-label">Times finalistas</div>
+        </div>
+      </div>
+
+      <div class="testimonials-grid">
+        <article class="testimonial-card">
+          <p class="testimonial-quote">"[REVISAR · depoimento real] Cheguei sem ideia, sem time e sem saber o que esperar. Saí no domingo com um produto rodando, três contatos pra continuar conversa e vontade de empreender."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">[Foto]</div>
+            <div class="testimonial-info">
+              <div class="testimonial-name">Nome real · Edição 2025</div>
+              <div class="testimonial-role">Profissão · Cidade</div>
+            </div>
+          </div>
+          <div class="testimonial-result">→ Resultado real após o evento</div>
+        </article>
+        <article class="testimonial-card">
+          <p class="testimonial-quote">"[REVISAR · depoimento real] Trabalho com RH há 12 anos e nunca pensei em participar. Fui empurrada por uma amiga e foi a melhor decisão. Aprendi mais em 3 dias do que em meses de estudo."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">[Foto]</div>
+            <div class="testimonial-info">
+              <div class="testimonial-name">Nome real · Edição 2025</div>
+              <div class="testimonial-role">Profissão · Cidade</div>
+            </div>
+          </div>
+          <div class="testimonial-result">→ Resultado real após o evento</div>
+        </article>
+        <article class="testimonial-card">
+          <p class="testimonial-quote">"[REVISAR · depoimento real] Fui com a ideia que estava engavetada há 2 anos. Em uma sexta-feira descobri que precisava pivotar. No domingo, apresentei algo completamente diferente — e melhor."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">[Foto]</div>
+            <div class="testimonial-info">
+              <div class="testimonial-name">Nome real · Edição 2025</div>
+              <div class="testimonial-role">Profissão · Cidade</div>
+            </div>
+          </div>
+          <div class="testimonial-result">→ Resultado real após o evento</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ INSCRIÇÕES ═══════════════ -->
+  <section class="pricing" aria-labelledby="pricing-title">
+    <span class="section-tag">Inscrições</span>
+    <div class="container-narrow">
+      <div class="eyebrow">Vagas limitadas</div>
+      <h2 id="pricing-title" class="section-title">Garanta sua vaga e <em>se prepare.</em></h2>
+      <p class="section-intro" style="margin-left: auto; margin-right: auto;">Inscrição inclui acesso aos 3 dias do evento, todas as refeições, mentoria, materiais e certificado oficial Techstars.</p>
+
+      <div class="urgency-bar">
+        <div class="urgency-top">
+          <span><strong>32 vagas</strong> preenchidas</span>
+          <span>de 50 totais</span>
+        </div>
+        <div class="urgency-progress">
+          <div class="urgency-fill"></div>
+        </div>
+        <div class="urgency-bottom">Lote promocional encerra em 23 dias</div>
+      </div>
+
+      <div class="pricing-card">
+        <div class="price-tag">Lote promocional</div>
+        <div class="price-value"><sup>R$</sup>89</div>
+        <div class="price-meta">À vista ou em até 3x sem juros · Lotes seguintes a partir de R$ 119</div>
+        <ul class="price-includes">
+          <li>Acesso completo aos 3 dias de evento</li>
+          <li>Refeições inclusas (4 refeições principais + lanches)</li>
+          <li>Mentoria com profissionais do mercado</li>
+          <li>Material de apoio e kit do participante</li>
+          <li>Certificado oficial Techstars</li>
+          <li>Concorrer aos prêmios dos patrocinadores</li>
+        </ul>
+        <button class="price-cta">Inscreva-se via Sympla →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PATROCINADORES ═══════════════ -->
+  <section class="sponsors" aria-labelledby="sponsors-title">
+    <span class="section-tag">Patrocinadores · 3 níveis</span>
+    <div class="container">
+      <div class="eyebrow">Quem torna isso possível</div>
+      <h2 id="sponsors-title" class="section-title">Empresas que <em>acreditam</em> no empreendedorismo do Vale.</h2>
+
+      <div class="sponsor-tier">
+        <div class="sponsor-tier-header">
+          <span class="sponsor-tier-label">Patrocinadores Globais</span>
+          <span class="sponsor-tier-badge sponsor-tier-badge--global">Global</span>
+          <div class="sponsor-tier-line"></div>
+        </div>
+        <div class="sponsor-grid sponsor-grid--global">
+          <div class="sponsor-slot">[ Logo Global 1 ]</div>
+          <div class="sponsor-slot">[ Logo Global 2 ]</div>
+          <div class="sponsor-slot">[ Logo Global 3 ]</div>
+        </div>
+      </div>
+
+      <div class="sponsor-tier">
+        <div class="sponsor-tier-header">
+          <span class="sponsor-tier-label">Patrocinadores Estaduais</span>
+          <span class="sponsor-tier-badge sponsor-tier-badge--state">Estadual</span>
+          <div class="sponsor-tier-line"></div>
+        </div>
+        <div class="sponsor-grid sponsor-grid--state">
+          <div class="sponsor-slot">[ Logo Estadual 1 ]</div>
+          <div class="sponsor-slot">[ Logo Estadual 2 ]</div>
+          <div class="sponsor-slot">[ Logo Estadual 3 ]</div>
+          <div class="sponsor-slot">[ Logo Estadual 4 ]</div>
+        </div>
+      </div>
+
+      <div class="sponsor-tier">
+        <div class="sponsor-tier-header">
+          <span class="sponsor-tier-label">Patrocinadores Locais</span>
+          <span class="sponsor-tier-badge sponsor-tier-badge--local">Local</span>
+          <div class="sponsor-tier-line"></div>
+        </div>
+        <div class="sponsor-grid sponsor-grid--local">
+          <div class="sponsor-slot">[ Logo Local 1 ]</div>
+          <div class="sponsor-slot">[ Logo Local 2 ]</div>
+          <div class="sponsor-slot">[ Logo Local 3 ]</div>
+          <div class="sponsor-slot">[ Logo Local 4 ]</div>
+          <div class="sponsor-slot">[ Logo Local 5 ]</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FAQ ═══════════════ -->
+  <section id="faq" class="faq" aria-labelledby="faq-title">
+    <span class="section-tag">FAQ · Acordeão</span>
+    <div class="container">
+      <div class="eyebrow">Perguntas frequentes</div>
+      <h2 id="faq-title" class="section-title">As <em>10 perguntas</em> que todo mundo faz.</h2>
+
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary class="faq-q">
+            <span class="faq-icon">+</span>
+            <span class="faq-q-text">Preciso ter uma ideia para participar?</span>
+          </summary>
+          <div class="faq-a">Não. Na sexta-feira, quem tem uma ideia pode apresentá-la em 60 segundos. Depois, o grupo vota nas melhores e os times se formam ao redor delas. Você pode entrar em qualquer time, mesmo sem ter pitchado nada. Mas se vier com algo na cabeça, é uma vantagem.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">
+            <span class="faq-icon">+</span>
+            <span class="faq-q-text">Preciso ser da área de tecnologia ou ter conhecimento de programação?</span>
+          </summary>
+          <div class="faq-a">De jeito nenhum. Os times mais fortes são mistos: design, marketing, vendas, finanças, operações. Cada perfil agrega algo essencial à construção do produto.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">
+            <span class="faq-icon">+</span>
+            <span class="faq-q-text">Quanto tempo eu preciso ficar no evento?</span>
+          </summary>
+          <div class="faq-a">A experiência completa exige presença nos 3 dias — sexta à noite, sábado o dia todo e domingo até 21h. É imersão, e o valor está em viver o ciclo inteiro.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">
+            <span class="faq-icon">+</span>
+            <span class="faq-q-text">Onde eu durmo? O evento dorme no local?</span>
+          </summary>
+          <div class="faq-a">Não, você dorme em casa ou em hospedagem própria. O evento começa cedo no sábado e domingo. Para quem vem de fora, indicamos algumas opções de hospedagem nos arredores.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">
+            <span class="faq-icon">+</span>
+            <span class="faq-q-text">Quanto custa? O que está incluso na inscrição?</span>
+          </summary>
+          <div class="faq-a">A inscrição inclui acesso aos 3 dias, todas as refeições principais, lanches, mentoria, kit do participante e certificado Techstars. Confira o valor atual na seção de inscrições.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">
+            <span class="faq-icon">+</span>
+            <span class="faq-q-text">Vou sair do evento com uma empresa montada?</span>
+          </summary>
+          <div class="faq-a">Não necessariamente — e nem é esse o objetivo. Você sai com um produto validado, uma rede de contatos e clareza sobre como construir um negócio. Alguns times decidem continuar depois do evento. Outros aprendem que aquela ideia não era viável. Ambos os caminhos são vitória.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">
+            <span class="faq-icon">+</span>
+            <span class="faq-q-text">Posso ir com amigos e formar um time só com eles?</span>
+          </summary>
+          <div class="faq-a">Pode ir com amigos, mas a regra é que os times só se formam após a votação. A ideia é justamente quebrar bolhas e conectar pessoas que normalmente não trabalhariam juntas.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">
+            <span class="faq-icon">+</span>
+            <span class="faq-q-text">Estudante ou universitário tem desconto?</span>
+          </summary>
+          <div class="faq-a">Sim, oferecemos lote estudante com valor reduzido. É necessário apresentar comprovante de matrícula no momento da inscrição.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">
+            <span class="faq-icon">+</span>
+            <span class="faq-q-text">Tenho mais de 50 anos. Sou velho demais para isso?</span>
+          </summary>
+          <div class="faq-a">De jeito nenhum. Já tivemos participantes de 17 a 67 anos. Experiência de vida é um diferencial enorme em times de Startup Weekend.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">
+            <span class="faq-icon">+</span>
+            <span class="faq-q-text">Em quais condições posso pedir reembolso?</span>
+          </summary>
+          <div class="faq-a">Reembolsos integrais são possíveis até 7 dias antes do evento. Após esse prazo, podemos transferir sua inscrição para outra pessoa. Detalhes nas políticas da plataforma.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CTA FINAL — pico emocional ═══════════════ -->
+  <section class="final-cta" aria-labelledby="final-cta-title">
+    <span class="section-tag">CTA Final · Pico</span>
+    <div class="container-narrow">
+      <span class="final-cta-temporal">Faltam <strong style="color: var(--orange); font-weight: 800;">102 dias</strong> · 14 a 16 de agosto</span>
+      <h2 id="final-cta-title" class="final-cta-headline">
+        Em agosto, alguém vai construir <em>algo novo</em> em Timbó.
+      </h2>
+      <p class="final-cta-sub">
+        Pode ser você. 54 horas. Uma ideia. Um time. Um produto no domingo à noite.
+      </p>
+      <button class="cta-primary">Quero participar</button>
+    </div>
+  </section>
+
+  <!-- ═══════════════ STICKY MOBILE CTA ═══════════════ -->
+  <div class="mobile-sticky-cta">
+    <button>Inscreva-se · Faltam 102 dias</button>
+  </div>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer role="contentinfo">
+    <span class="section-tag">Footer</span>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Startup Weekend<br /><span>Timbó</span></div>
+          <p class="footer-tagline">Um fim de semana para experimentar, na prática, o que é empreender. 14 a 16 de agosto de 2026, em Timbó/SC.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Evento</h4>
+          <ul>
+            <li><a href="#o-que-e">O que é</a></li>
+            <li><a href="#como-funciona">Como funciona</a></li>
+            <li><a href="#mentores">Mentores</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <ul>
+            <li>tswtimbo@gmail.com</li>
+            <li>Cíntia · (47) 99726-1174</li>
+            <li>Junior · (47) 99849-6064</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Siga</h4>
+          <ul>
+            <li><a>Instagram @sw.timbo</a></li>
+            <li><a>LinkedIn</a></li>
+            <li><a>Techstars Global</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">© 2026 · Startup Weekend Timbó · Powered by Techstars</span>
+        <span class="footer-copy">CET · R. Duque de Caxias, 830 · Timbó SC</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
