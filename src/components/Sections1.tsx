@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { SectionHeader } from './SectionHeader';
-import { ACTIVITY_STATS, GLOBAL_STATS, SCHEDULE } from '../data/content';
+import { ACTIVITY_STATS, GLOBAL_STATS, SCHEDULE_DAYS } from '../data/content';
 
 // ════════════════ ACTIVITY STRIP ════════════════
 export function ActivityStrip() {
@@ -89,11 +89,7 @@ export function WhatIs() {
 // ════════════════ COMO FUNCIONA ════════════════
 export function HowItWorks() {
   const [activeDay, setActiveDay] = useState(0);
-  const days = [
-    { label: 'Sexta', date: '· 14/08' },
-    { label: 'Sábado', date: '· 15/08' },
-    { label: 'Domingo', date: '· 16/08' },
-  ];
+  const day = SCHEDULE_DAYS[activeDay];
 
   return (
     <section id="como-funciona" className="py-24" aria-labelledby="how-title">
@@ -117,16 +113,16 @@ export function HowItWorks() {
 
         {/* Tabs por dia */}
         <div
-          className="mb-10 inline-flex gap-1 rounded-[10px] bg-paper-warm p-1 max-md:w-full max-md:overflow-x-auto"
+          className="mb-8 inline-flex gap-1 rounded-[10px] bg-paper-warm p-1 max-md:w-full max-md:overflow-x-auto"
           role="tablist"
         >
-          {days.map((d, i) => (
+          {SCHEDULE_DAYS.map((d, i) => (
             <button
               key={d.label}
               role="tab"
               aria-selected={activeDay === i}
               onClick={() => setActiveDay(i)}
-              className={`rounded-[7px] px-5 py-2.5 font-display text-[0.8125rem] font-bold uppercase tracking-[0.06em] transition-all ${
+              className={`whitespace-nowrap rounded-[7px] px-5 py-2.5 font-display text-[0.8125rem] font-bold uppercase tracking-[0.06em] transition-all ${
                 activeDay === i
                   ? 'bg-paper text-ink shadow-[0_1px_3px_oklch(0_0_0_/_0.06)]'
                   : 'bg-transparent text-ink-muted'
@@ -138,63 +134,44 @@ export function HowItWorks() {
                   activeDay === i ? 'text-orange' : 'text-ink-muted'
                 }`}
               >
-                {d.date}
+                · {d.date}
               </span>
             </button>
           ))}
         </div>
 
-        {/* Timeline — mostra cronograma de sexta (dias sábado/domingo são placeholders) */}
-        {activeDay === 0 ? (
-          <div className="grid">
-            {SCHEDULE.map((row, i) => (
-              <div
-                key={i}
-                className={`grid grid-cols-[200px_1fr] gap-12 border-t border-[var(--line)] py-7 max-md:grid-cols-1 max-md:gap-3 ${
-                  i === SCHEDULE.length - 1 ? 'border-b' : ''
-                } ${
-                  row.keyMoment
-                    ? '-ml-4 rounded-l bg-gradient-to-r from-[var(--orange-soft)] to-transparent pl-4'
-                    : ''
-                }`}
-              >
-                <div>
-                  <div className="font-display text-[1.0625rem] font-extrabold uppercase tracking-[0.04em] text-ink">
-                    {row.time}
-                  </div>
-                  <div
-                    className={`mt-1 font-display text-[0.6875rem] font-bold uppercase tracking-[0.1em] ${
-                      row.keyMoment ? 'text-orange' : 'text-ink-muted'
-                    }`}
-                  >
-                    {row.sub}
-                  </div>
-                </div>
-                <div>
-                  <h3 className="mb-2 flex flex-wrap items-center gap-2.5 font-display text-[1.1875rem] font-bold leading-tight">
-                    {row.title}
-                    {row.chip && (
-                      <span className="rounded bg-[var(--orange-soft)] px-2 py-[3px] font-display text-[0.625rem] font-extrabold uppercase tracking-[0.12em] text-orange">
-                        {row.chip}
-                      </span>
-                    )}
-                  </h3>
-                  <p className="text-[0.9375rem] leading-[1.55] text-ink-soft">{row.desc}</p>
-                </div>
+        {/* Nota do dia */}
+        <p className="mb-8 font-body text-[1.0625rem] italic leading-[1.5] text-ink-soft">
+          {day.note}
+        </p>
+
+        {/* Timeline do dia ativo */}
+        <div className="grid">
+          {day.items.map((row, i) => (
+            <div
+              key={i}
+              className={`grid grid-cols-[140px_1fr] gap-10 border-t border-[var(--line)] py-5 max-md:grid-cols-[88px_1fr] max-md:gap-5 ${
+                i === day.items.length - 1 ? 'border-b' : ''
+              } ${
+                row.keyMoment
+                  ? '-ml-4 rounded-l bg-gradient-to-r from-[var(--orange-soft)] to-transparent pl-4'
+                  : ''
+              }`}
+            >
+              <div className="font-display text-[1.0625rem] font-extrabold uppercase tracking-[0.04em] text-ink">
+                {row.time}
               </div>
-            ))}
-          </div>
-        ) : (
-          <div className="rounded-xl border border-dashed border-[var(--line)] bg-paper px-8 py-12 text-center">
-            <div className="mb-3 font-display text-2xl text-ink-faint">↗</div>
-            <div className="mb-1.5 font-display text-[0.9375rem] font-bold text-ink-soft">
-              Cronograma de {days[activeDay].label.toLowerCase()} em breve
+              <h3 className="flex flex-wrap items-center gap-2.5 font-display text-[1.0625rem] font-bold leading-tight text-ink">
+                {row.title}
+                {'chip' in row && row.chip && (
+                  <span className="rounded bg-[var(--orange-soft)] px-2 py-[3px] font-display text-[0.625rem] font-extrabold uppercase tracking-[0.12em] text-orange">
+                    {row.chip}
+                  </span>
+                )}
+              </h3>
             </div>
-            <div className="font-body text-[0.875rem] text-ink-muted">
-              Acompanhe nosso Instagram para o cronograma completo
-            </div>
-          </div>
-        )}
+          ))}
+        </div>
       </div>
     </section>
   );

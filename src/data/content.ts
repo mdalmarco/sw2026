@@ -58,30 +58,56 @@ export const TIMELINE_STEPS = [
   },
 ];
 
-// ─── Cronograma "Como funciona" ───
-export const SCHEDULE = [
+// ─── Programação completa dos 3 dias ───
+// keyMoment: destaca visualmente os momentos decisivos
+export const SCHEDULE_DAYS = [
   {
-    time: '19h',
-    sub: 'Abertura',
-    title: 'Networking, coffee break e quebra-gelo',
-    desc: 'Você chega, se apresenta e conhece outras pessoas curiosas como você. Sem hierarquia, sem palco, sem pressão.',
-    keyMoment: false,
+    label: 'Sexta',
+    date: '14/08',
+    note: 'O dia em que as ideias viram times.',
+    items: [
+      { time: '18h00', title: 'Credenciamento', keyMoment: false },
+      { time: '19h00', title: 'Apresentação do evento e metodologia', keyMoment: false },
+      { time: '19h20', title: 'Boas-vindas e oradores', keyMoment: false },
+      { time: '20h00', title: 'Início dos pitches', chip: 'Você decide se sobe', keyMoment: true },
+      { time: '21h30', title: 'Votação dos pitches', keyMoment: false },
+      { time: '21h45', title: 'Formação dos times', chip: 'Onde o time nasce', keyMoment: true },
+      { time: '22h00', title: 'Formalização das equipes', keyMoment: false },
+    ],
   },
   {
-    time: '20h30',
-    sub: 'Momento chave',
-    title: 'Pitches de 60 segundos',
-    chip: 'Você decide se sobe',
-    desc: 'Quem tem uma ideia sobe no palco e tem 60 segundos pra apresentar. Não tem ideia? Sem problema. Você ainda vai escolher uma para trabalhar.',
-    keyMoment: true,
+    label: 'Sábado',
+    date: '15/08',
+    note: 'O dia de construir, validar e ajustar.',
+    items: [
+      { time: '08h00', title: 'Check-in e café da manhã', keyMoment: false },
+      { time: '09h00', title: 'Apresentação dos mentores', keyMoment: false },
+      { time: '09h30', title: 'Talk: Validação', keyMoment: false },
+      { time: '10h00', title: 'Mentorias + Work', chip: 'Mão na massa', keyMoment: true },
+      { time: '12h00', title: 'Almoço', keyMoment: false },
+      { time: '13h00', title: 'Mentorias + Work', keyMoment: false },
+      { time: '16h30', title: 'Café da tarde', keyMoment: false },
+      { time: '17h00', title: 'Talk: MVP', keyMoment: false },
+      { time: '19h00', title: 'Jantar', keyMoment: false },
+      { time: '20h00', title: 'Encerramento do dia', keyMoment: false },
+    ],
   },
   {
-    time: '21h30',
-    sub: 'Momento chave',
-    title: 'Votação e formação dos times',
-    chip: 'Onde o time nasce',
-    desc: 'O grupo vota nas ideias mais promissoras. Os times se formam ao redor das vencedoras. Em 30 minutos, você passa de plateia a co-fundador.',
-    keyMoment: true,
+    label: 'Domingo',
+    date: '16/08',
+    note: 'O dia do pitch final diante dos jurados.',
+    items: [
+      { time: '09h00', title: 'Check-in e café da manhã', keyMoment: false },
+      { time: '09h45', title: 'Abertura', keyMoment: false },
+      { time: '10h00', title: 'Talk: Pitch', keyMoment: false },
+      { time: '10h30', title: 'Mentorias + Work', keyMoment: false },
+      { time: '11h30', title: 'Pré-pitch', chip: 'Último ensaio', keyMoment: true },
+      { time: '12h00', title: 'Almoço', keyMoment: false },
+      { time: '16h00', title: 'Entrega dos pitches', keyMoment: false },
+      { time: '16h30', title: 'Café da tarde', keyMoment: false },
+      { time: '17h00', title: 'Início dos pitches', chip: 'A hora da verdade', keyMoment: true },
+      { time: '19h30', title: 'Encerramento e premiação', keyMoment: false },
+    ],
   },
 ];
 
@@ -134,8 +160,8 @@ export const VIBE_PHOTOS = [
   { src: '/images/Equipe_Participante.jpg', alt: 'Equipe de participantes da edição 2025', caption: 'Time · construindo juntos' },
   { src: '/images/Mentores.jpg', alt: 'Time de mentores no palco', caption: 'Mentores · acompanhamento' },
   { src: '/images/Grupo_Trabalhando.jpg', alt: 'Grupo trabalhando ao redor das mesas', caption: 'Sábado · validação e construção' },
-  { src: null, alt: '', caption: 'Domingo · 18h · pitch final', placeholder: '[ Foto pitch final ]' },
-  { src: null, alt: '', caption: 'Domingo · banca e premiação', placeholder: '[ Foto banca de jurados ]' },
+  { src: '/images/Plateia_Sabado.jpg', alt: 'Plateia acompanhando uma talk durante o evento', caption: 'Sábado · talks e aprendizado' },
+  { src: '/images/Premiacao.jpg', alt: 'Time premiado no palco ao fim da edição 2025', caption: 'Domingo · premiação dos finalistas' },
 ];
 
 // ─── Blog ───
@@ -269,10 +295,23 @@ export const PAST_STATS = [
 ];
 
 // ─── Patrocinadores ───
-// Locais: logos reais. Globais/Estaduais: aguardando.
+// Locais e Estaduais: logos reais. Globais: aguardando.
 export const SPONSORS = {
   global: [], // aguardando
-  estadual: [], // aguardando ajuste do Marcos
+  estadual: [
+    // Logos com dark:false ficam em slot claro; o conteúdo já é escuro/colorido
+    { name: 'FAPESC', logo: '/images/sponsors/fapesc.png', dark: false },
+    { name: 'ACATE', logo: '/images/sponsors/acate.png', dark: false },
+    { name: 'Startup SC', logo: '/images/sponsors/startup_sc.png', dark: false },
+    { name: 'Senior Sistemas', logo: '/images/sponsors/senior.png', dark: false },
+    { name: 'Magazord', logo: '/images/sponsors/magazord.png', dark: false },
+    { name: 'Dati', logo: '/images/sponsors/dati.png', dark: false },
+    { name: 'Questum', logo: '/images/sponsors/questum.png', dark: false },
+    { name: 'KLAB', logo: '/images/sponsors/klab.png', dark: false },
+    { name: 'Notion', logo: '/images/sponsors/notion.png', dark: false },
+    { name: 'Investidores.vc', logo: '/images/sponsors/investidores.png', dark: false },
+    // TODO: reenviar (vieram corrompidos): AWS, Hostinger, Inova, Midihub, nd, Nexpon, WOW, Sebrae, 49 Educação
+  ],
   local: [
     { name: 'CETISA', logo: '/images/cetisa.png', dark: false },
     { name: 'Conecta AMVE Timbó', logo: '/images/conecta_amve.png', dark: true },
