@@ -16,7 +16,7 @@ export default function Nav() {
           <img
             src="/images/logo_sw_timbo.jpg"
             alt="Techstars Startup Weekend Timbó"
-            className="h-16 w-auto max-md:h-12 [mix-blend-mode:multiply]"
+            className="h-24 w-auto max-md:h-16 [mix-blend-mode:multiply]"
           />
         </a>
 
