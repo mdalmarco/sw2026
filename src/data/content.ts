@@ -273,8 +273,8 @@ export const PRICING = {
   vagasPreenchidas: 32,
   vagasTotais: 50,
   loteEncerra: 23, // dias
-  tag: 'Lote promocional',
-  valor: '89',
+  tag: 'Pré-venda',
+  valor: '70',
   meta: 'À vista ou em até 3x sem juros · Lotes seguintes a partir de R$ 119',
   symplaUrl: 'https://www.sympla.com.br/evento/techstars-startup-weekend-timbo-2026/3403386',
   includes: [
