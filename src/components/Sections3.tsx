@@ -22,10 +22,21 @@ export function Blog() {
           {BLOG_POSTS.map((post) => (
             <article
               key={post.title}
-              className="cursor-pointer overflow-hidden rounded-xl bg-paper transition-all hover:-translate-y-1 hover:shadow-[0_8px_24px_oklch(0_0_0_/_0.06)]"
+              className="group cursor-pointer overflow-hidden rounded-xl bg-paper transition-all hover:-translate-y-1 hover:shadow-[0_8px_24px_oklch(0_0_0_/_0.06)]"
             >
-              <div className="flex aspect-[16/10] items-center justify-center bg-gradient-to-br from-paper-warm to-paper-warmer font-display text-[0.6875rem] font-semibold uppercase tracking-[0.1em] text-ink-faint">
-                [ Imagem do post ]
+              <div className="aspect-[16/10] overflow-hidden bg-gradient-to-br from-paper-warm to-paper-warmer">
+                {post.image ? (
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                ) : (
+                  <div className="flex h-full w-full items-center justify-center font-display text-[0.6875rem] font-semibold uppercase tracking-[0.1em] text-ink-faint">
+                    Em breve
+                  </div>
+                )}
               </div>
               <div className="p-6">
                 <div className="mb-3 font-display text-[0.6875rem] font-bold uppercase tracking-[0.1em] text-orange">
