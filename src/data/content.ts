@@ -252,7 +252,7 @@ export const TESTIMONIALS = [
     quote: 'Fui sem saber o que esperar e saí transformada. Aprendi como uma ideia vira um negócio.',
     name: 'Siene Pacher',
     role: 'Edição 2025',
-    photo: null, // TODO: adicionar foto da Siene quando disponível
+    photo: '/images/Siene_Pacher.png',
     result: 'Reconectou-se com criatividade e coragem para seguir projetos',
   },
 ];
