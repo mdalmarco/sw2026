@@ -45,15 +45,15 @@ export function Sponsors() {
                       <div
                         key={s.name}
                         className={`flex aspect-[16/9] items-center justify-center overflow-hidden rounded-[10px] p-4 transition-transform hover:-translate-y-0.5 ${
-                          s.dark === true ? 'bg-ink' : s.dark === 'warm' ? 'bg-paper-warm' : 'bg-paper'
+                          s.dark === true ? 'bg-ink' : 'bg-paper-warm'
                         }`}
                       >
                         <img
                           src={s.logo}
                           alt={s.name}
                           loading="lazy"
-                          className={`max-h-full max-w-full object-contain transition-[filter] ${
-                            s.dark === true ? '' : s.dark === 'warm' ? '[mix-blend-mode:multiply]' : 'grayscale-[20%] hover:grayscale-0'
+                          className={`max-h-full max-w-full object-contain [mix-blend-mode:multiply] ${
+                            s.dark === true ? '![mix-blend-mode:normal]' : ''
                           }`}
                         />
                       </div>
@@ -61,7 +61,7 @@ export function Sponsors() {
                   : Array.from({ length: tier.slots }).map((_, i) => (
                       <div
                         key={i}
-                        className="flex aspect-[16/9] items-center justify-center rounded-[10px] bg-paper font-display text-[0.6875rem] font-semibold uppercase tracking-[0.08em] text-ink-faint"
+                        className="flex aspect-[16/9] items-center justify-center rounded-[10px] bg-paper-warm font-display text-[0.6875rem] font-semibold uppercase tracking-[0.08em] text-ink-faint"
                       >
                         [ Em breve ]
                       </div>
