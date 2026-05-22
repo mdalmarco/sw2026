@@ -3,57 +3,125 @@ import { SectionHeader } from './SectionHeader';
 import { BLOG_POSTS, TAKEAWAYS, MENTORS } from '../data/content';
 
 // ════════════════ BLOG ════════════════
-export function Blog() {
+type BlogPost = (typeof import('../data/content').BLOG_POSTS)[number];
+
+function BlogModal({ post, onClose }: { post: BlogPost; onClose: () => void }) {
   return (
-    <section id="blog" className="bg-paper-warm py-24" aria-labelledby="blog-title">
-      <div className="mx-auto max-w-[1200px] px-8 max-md:px-5">
-        <SectionHeader
-          id="blog-title"
-          eyebrow="Blog"
-          title={
-            <>
-              Conteúdo para{' '}
-              <em className="not-italic text-orange">quem está chegando agora.</em>
-            </>
-          }
-          intro="Histórias de quem já passou pelo SW, dicas para se preparar e referências sobre empreendedorismo no Vale do Itajaí."
-        />
-        <div className="mt-8 grid grid-cols-3 gap-6 max-md:grid-cols-1">
-          {BLOG_POSTS.map((post) => (
-            <article
-              key={post.title}
-              className="group cursor-pointer overflow-hidden rounded-xl bg-paper transition-all hover:-translate-y-1 hover:shadow-[0_8px_24px_oklch(0_0_0_/_0.06)]"
-            >
-              <div className="aspect-[16/10] overflow-hidden bg-gradient-to-br from-paper-warm to-paper-warmer">
-                {post.image ? (
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                ) : (
-                  <div className="flex h-full w-full items-center justify-center font-display text-[0.6875rem] font-semibold uppercase tracking-[0.1em] text-ink-faint">
-                    Em breve
-                  </div>
-                )}
-              </div>
-              <div className="p-6">
-                <div className="mb-3 font-display text-[0.6875rem] font-bold uppercase tracking-[0.1em] text-orange">
-                  {post.meta}
-                </div>
-                <h3 className="mb-2 font-display text-[1.0625rem] font-bold leading-[1.3] text-ink">
-                  {post.title}
+    <div
+      className="fixed inset-0 z-[200] flex items-start justify-center overflow-y-auto bg-black/50 px-4 py-12 backdrop-blur-sm"
+      onClick={onClose}
+    >
+      <article
+        className="relative w-full max-w-[720px] overflow-hidden rounded-2xl bg-paper shadow-[0_24px_64px_oklch(0_0_0_/_0.18)]"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Imagem de capa */}
+        {post.image && (
+          <div className="aspect-[16/7] overflow-hidden">
+            <img src={post.image} alt={post.title} className="h-full w-full object-cover" />
+          </div>
+        )}
+        <div className="p-8 max-md:p-6">
+          {/* Meta */}
+          <div className="mb-4 font-display text-[0.6875rem] font-bold uppercase tracking-[0.1em] text-orange">
+            {post.meta}
+          </div>
+          {/* Título */}
+          <h2 className="mb-6 font-display text-[1.5rem] font-extrabold leading-[1.2] text-ink max-md:text-[1.25rem]">
+            {post.title}
+          </h2>
+          {/* Corpo */}
+          <div className="space-y-4">
+            {(post.body ?? []).map((block: string, i: number) =>
+              block.startsWith('## ') ? (
+                <h3
+                  key={i}
+                  className="pt-4 font-display text-[1.0625rem] font-bold text-ink"
+                >
+                  {block.replace('## ', '')}
                 </h3>
-                <p className="font-body text-[0.9375rem] leading-[1.5] text-ink-muted">
-                  {post.excerpt}
+              ) : (
+                <p key={i} className="font-body text-[1rem] leading-[1.7] text-ink-soft">
+                  {block}
                 </p>
-              </div>
-            </article>
-          ))}
+              )
+            )}
+          </div>
         </div>
-      </div>
-    </section>
+        {/* Botão fechar */}
+        <button
+          onClick={onClose}
+          aria-label="Fechar"
+          className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-paper/80 font-display text-[1.1rem] font-bold text-ink shadow backdrop-blur-sm transition hover:bg-orange hover:text-white"
+        >
+          ×
+        </button>
+      </article>
+    </div>
+  );
+}
+
+export function Blog() {
+  const [active, setActive] = useState<BlogPost | null>(null);
+
+  return (
+    <>
+      <section id="blog" className="bg-paper-warm py-24" aria-labelledby="blog-title">
+        <div className="mx-auto max-w-[1200px] px-8 max-md:px-5">
+          <SectionHeader
+            id="blog-title"
+            eyebrow="Blog"
+            title={
+              <>
+                Conteúdo para{' '}
+                <em className="not-italic text-orange">quem está chegando agora.</em>
+              </>
+            }
+            intro="Histórias de quem já passou pelo SW, dicas para se preparar e referências sobre empreendedorismo no Vale do Itajaí."
+          />
+          <div className="mt-8 grid grid-cols-3 gap-6 max-md:grid-cols-1">
+            {BLOG_POSTS.map((post) => (
+              <article
+                key={post.title}
+                onClick={() => setActive(post)}
+                className="group cursor-pointer overflow-hidden rounded-xl bg-paper transition-all hover:-translate-y-1 hover:shadow-[0_8px_24px_oklch(0_0_0_/_0.06)]"
+              >
+                <div className="aspect-[16/10] overflow-hidden bg-gradient-to-br from-paper-warm to-paper-warmer">
+                  {post.image ? (
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="flex h-full w-full items-center justify-center font-display text-[0.6875rem] font-semibold uppercase tracking-[0.1em] text-ink-faint">
+                      Em breve
+                    </div>
+                  )}
+                </div>
+                <div className="p-6">
+                  <div className="mb-3 font-display text-[0.6875rem] font-bold uppercase tracking-[0.1em] text-orange">
+                    {post.meta}
+                  </div>
+                  <h3 className="mb-2 font-display text-[1.0625rem] font-bold leading-[1.3] text-ink">
+                    {post.title}
+                  </h3>
+                  <p className="mb-4 font-body text-[0.9375rem] leading-[1.5] text-ink-muted">
+                    {post.excerpt}
+                  </p>
+                  <span className="font-display text-[0.8125rem] font-bold text-orange transition-all group-hover:underline">
+                    Ler artigo →
+                  </span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {active && <BlogModal post={active} onClose={() => setActive(null)} />}
+    </>
   );
 }
 
