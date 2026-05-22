@@ -386,12 +386,10 @@ export const SPONSORS = {
     // TODO: reenviar (vieram corrompidos): AWS, Hostinger, Inova, Midihub, nd, Nexpon, WOW, Sebrae, 49 Educação
   ],
   local: [
-    { name: 'CETISA', logo: '/images/cetisa.png', dark: 'warm' },
-    { name: 'Conecta AMVE Timbó', logo: '/images/conecta_amve.png', dark: true },
-    { name: 'Valesoft', logo: '/images/valesoft.png', dark: 'warm' },
-    { name: 'Rudolph', logo: '/images/rudolph.png', dark: 'warm' },
-    { name: 'USITIM', logo: '/images/usitim.png', dark: 'warm' },
-    { name: 'Racezone', logo: '/images/racezone.png', dark: 'warm' },
+    { name: 'Conecta AMVE Timbó',         logo: '/images/sponsors/conecta_amve.jpg',  dark: 'warm' },
+    { name: 'CIB · Gene Conecta',          logo: '/images/sponsors/cib_gene.jpg',      dark: 'warm' },
+    { name: 'ACATE Blusoft · Vale Europeu',logo: '/images/sponsors/acate_blusoft.jpg', dark: 'warm' },
+    { name: 'CETISA',                      logo: '/images/sponsors/cetisa.jpg',        dark: 'warm' },
   ],
 };
 
