@@ -12,11 +12,11 @@ export default function Nav() {
         className="mx-auto flex max-w-[1200px] items-center justify-between px-8 py-4 max-md:px-5"
         aria-label="Navegação principal"
       >
-        <a href="#" className="flex items-center overflow-hidden">
+        <a href="#" className="flex items-center">
           <img
             src="/images/logo_sw_timbo.jpg"
             alt="Techstars Startup Weekend Timbó"
-            className="h-16 w-auto max-md:h-12 scale-[1.35] object-contain [mix-blend-mode:multiply]"
+            className="h-14 w-auto max-md:h-10 object-contain [mix-blend-mode:multiply]"
           />
         </a>
 
