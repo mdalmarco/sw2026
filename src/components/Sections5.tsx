@@ -45,7 +45,7 @@ export function Sponsors() {
                       <div
                         key={s.name}
                         className={`flex aspect-[16/9] items-center justify-center overflow-hidden rounded-[10px] p-4 transition-transform hover:-translate-y-0.5 ${
-                          s.dark ? 'bg-ink' : 'bg-paper'
+                          s.dark === true ? 'bg-ink' : s.dark === 'warm' ? 'bg-paper-warm' : 'bg-paper'
                         }`}
                       >
                         <img
