@@ -1,5 +1,4 @@
-import { PRICING,
-   EVENT } from '../data/content';
+import { EVENT, PRICING } from '../data/content';
 
 export default function Hero() {
   return (
