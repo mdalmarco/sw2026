@@ -154,7 +154,7 @@ export const INTRA = {
 };
 
 // ─── Mosaico "Como é estar lá" ───
-export const VIBE_PHOTOS = [
+export const VIBE_PHOTOS: { src: string; alt: string; caption: string; placeholder?: string }[] = [
   { src: '/images/Foto_Geral.jpeg', alt: 'Foto geral da edição 2025 - todos os participantes', caption: 'Domingo · 21h · turma da edição 2025' },
   { src: '/images/Foto_pitches.jpg', alt: 'Apresentação de pitches na sexta-feira', caption: 'Sexta · 60s pitches' },
   { src: '/images/Equipe_Participante.jpg', alt: 'Equipe de participantes da edição 2025', caption: 'Time · construindo juntos' },
