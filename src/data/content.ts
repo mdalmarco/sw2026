@@ -5,7 +5,13 @@
 
 export const EVENT = {
   edition: 'SW Timbó · 2ª Edição',
-  daysUntil: 102, // TODO: tornar dinâmico via cálculo de data
+  daysUntil: Math.max(
+    0,
+    Math.ceil(
+      (new Date('2026-08-14T00:00:00-03:00').getTime() - Date.now()) /
+        (1000 * 60 * 60 * 24)
+    )
+  ),
   dateLabel: '14 — 16 ago 2026',
   dateRange: '14 a 16 de agosto',
   venueShort: 'CETISA · Timbó · SC',
