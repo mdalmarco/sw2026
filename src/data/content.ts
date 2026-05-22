@@ -1,5 +1,5 @@
 // ════════════════════════════════════════════
-// DADOS CENTRAIS — SW Timbó 2026
+// DADOS CENTRAIS — SW Timbó 2026 · v3.4
 // Editar conteúdo aqui sem mexer nos componentes
 // ════════════════════════════════════════════
 
