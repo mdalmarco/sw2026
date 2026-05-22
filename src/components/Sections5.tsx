@@ -53,7 +53,7 @@ export function Sponsors() {
                           alt={s.name}
                           loading="lazy"
                           className={`max-h-full max-w-full object-contain transition-[filter] ${
-                            s.dark ? '' : 'grayscale-[20%] hover:grayscale-0'
+                            s.dark === true ? '' : s.dark === 'warm' ? '[mix-blend-mode:multiply]' : 'grayscale-[20%] hover:grayscale-0'
                           }`}
                         />
                       </div>
