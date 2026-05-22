@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { PRICING,
+   useState } from 'react';
 import { SectionHeader } from './SectionHeader';
 import { SPONSORS, FAQ as FAQ_DATA, EVENT } from '../data/content';
 
@@ -153,7 +154,7 @@ export function FinalCTA() {
           Pode ser você. 54 horas. Uma ideia. Um time. Um produto no domingo à noite.
         </p>
         <a
-          href="#inscricoes"
+          href={PRICING.symplaUrl} target="_blank" rel="noopener noreferrer"
           className="inline-block min-h-[56px] rounded-lg bg-orange px-9 py-[18px] font-display text-[0.9375rem] font-extrabold uppercase tracking-[0.06em] text-white shadow-[0_2px_12px_oklch(0.5_0.12_40_/_0.18)] transition-all hover:-translate-y-0.5 hover:bg-orange-dark"
         >
           Quero participar
@@ -168,7 +169,7 @@ export function MobileStickyCTA() {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-[90] border-t border-[var(--line)] bg-paper p-3 shadow-[0_-4px_16px_oklch(0_0_0_/_0.06)] md:hidden">
       <a
-        href="#inscricoes"
+        href={PRICING.symplaUrl} target="_blank" rel="noopener noreferrer"
         className="block w-full rounded-lg bg-orange py-4 text-center font-display text-[0.9375rem] font-extrabold uppercase tracking-[0.06em] text-white"
       >
         Inscreva-se · Faltam {EVENT.daysUntil} dias
