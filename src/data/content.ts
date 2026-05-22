@@ -363,7 +363,7 @@ export const PAST_STATS = [
 
 // ─── Patrocinadores ───
 // Locais e Estaduais: logos reais. Globais: aguardando.
-export const SPONSORS = {
+export const SPONSORS: Record<'global'|'estadual'|'local', { name: string; logo: string; dark: boolean | 'warm' }[]> = {
   global: [
     { name: 'Google for Startups', logo: '/images/sponsors/google_startups.png', dark: 'warm' },
     { name: 'Deel',                logo: '/images/sponsors/deel.png',            dark: 'warm' },
