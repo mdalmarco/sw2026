@@ -365,11 +365,11 @@ export const PAST_STATS = [
 // Locais e Estaduais: logos reais. Globais: aguardando.
 export const SPONSORS = {
   global: [
-    { name: 'Google for Startups', logo: '/images/sponsors/google_startups.png', dark: false },
-    { name: 'Deel',                logo: '/images/sponsors/deel.png',            dark: false },
-    { name: 'Mercury',             logo: '/images/sponsors/mercury.png',         dark: false },
-    { name: 'HSBC Innovation Banking', logo: '/images/sponsors/hsbc.png',        dark: false },
-    { name: 'Brex',                logo: '/images/sponsors/brex.png',            dark: false },
+    { name: 'Google for Startups', logo: '/images/sponsors/google_startups.png', dark: 'warm' },
+    { name: 'Deel',                logo: '/images/sponsors/deel.png',            dark: 'warm' },
+    { name: 'Mercury',             logo: '/images/sponsors/mercury.png',         dark: 'warm' },
+    { name: 'HSBC Innovation Banking', logo: '/images/sponsors/hsbc.png',        dark: 'warm' },
+    { name: 'Brex',                logo: '/images/sponsors/brex.png',            dark: 'warm' },
   ],
   estadual: [
     // Logos com dark:false ficam em slot claro; o conteúdo já é escuro/colorido
