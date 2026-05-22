@@ -1,4 +1,5 @@
-import { EVENT } from '../data/content';
+import { PRICING,
+   EVENT } from '../data/content';
 
 export default function Hero() {
   return (
@@ -44,7 +45,7 @@ export default function Hero() {
         {/* CTAs */}
         <div className="mt-2 flex flex-wrap items-center gap-6">
           <a
-            href="#inscricoes"
+            href={PRICING.symplaUrl} target="_blank" rel="noopener noreferrer"
             className="min-h-[56px] rounded-lg bg-orange px-9 py-[18px] font-display text-[0.9375rem] font-extrabold uppercase tracking-[0.06em] text-white shadow-[0_2px_12px_oklch(0.5_0.12_40_/_0.18)] transition-all hover:-translate-y-0.5 hover:bg-orange-dark hover:shadow-[0_6px_20px_oklch(0.5_0.12_40_/_0.25)]"
           >
             Quero participar
