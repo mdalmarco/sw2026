@@ -1,7 +1,6 @@
-import { PRICING,
-   useState } from 'react';
+import { useState } from 'react';
 import { SectionHeader } from './SectionHeader';
-import { SPONSORS, FAQ as FAQ_DATA, EVENT } from '../data/content';
+import { SPONSORS, FAQ as FAQ_DATA, EVENT, PRICING } from '../data/content';
 
 // ════════════════ PATROCINADORES ════════════════
 export function Sponsors() {
