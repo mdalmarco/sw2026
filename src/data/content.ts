@@ -317,7 +317,7 @@ export const TESTIMONIALS = [
   {
     quote: 'Fui sem saber o que esperar e saí transformada. Aprendi como uma ideia vira um negócio.',
     name: 'Siene Pacher',
-    role: 'Edição 2025',
+    role: 'Equipe Ponto Seguro · Edição 2025',
     photo: '/images/Siene_Pacher.png',
     result: 'Reconectou-se com criatividade e coragem para seguir projetos',
   },
