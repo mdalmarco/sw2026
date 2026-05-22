@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#EBF4F8"/>
+  <rect x="0" y="0" width="800" height="500" fill="url(#g3)"/>
+  <defs>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EBF4F8;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#E0EDF5;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <!-- microfone -->
+  <rect x="375" y="130" width="50" height="90" rx="25" fill="#2BA8E0" opacity="0.3"/>
+  <rect x="385" y="140" width="30" height="70" rx="15" fill="#2BA8E0" opacity="0.5"/>
+  <!-- base do microfone -->
+  <path d="M350 230 Q350 280 400 280 Q450 280 450 230" stroke="#2BA8E0" stroke-width="6" fill="none" opacity="0.4"/>
+  <rect x="395" y="280" width="10" height="50" fill="#2BA8E0" opacity="0.3"/>
+  <rect x="365" y="325" width="70" height="8" rx="4" fill="#2BA8E0" opacity="0.3"/>
+  <!-- ondas de som -->
+  <path d="M310 185 Q290 200 290 220 Q290 240 310 255" stroke="#E8571E" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.3"/>
+  <path d="M280 170 Q250 195 250 220 Q250 245 280 270" stroke="#E8571E" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.2"/>
+  <path d="M490 185 Q510 200 510 220 Q510 240 490 255" stroke="#E8571E" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.3"/>
+  <path d="M520 170 Q550 195 550 220 Q550 245 520 270" stroke="#E8571E" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.2"/>
+  <!-- cronômetro -->
+  <text x="400" y="415" font-family="Arial" font-size="22" fill="#E8571E" opacity="0.4" text-anchor="middle" font-weight="bold">60s</text>
+  <text x="160" y="455" font-family="Arial" font-size="13" fill="#B8A898" letter-spacing="3" text-anchor="middle">SOBRE O EVENTO · 5 MIN</text>
+  <text x="640" y="455" font-family="Arial" font-size="13" fill="#2BA8E0" letter-spacing="2" text-anchor="middle">STARTUP WEEKEND TIMBÓ</text>
+</svg>
