@@ -45,7 +45,7 @@ export function Sponsors() {
                       <div
                         key={s.name}
                         className={`flex aspect-[16/9] items-center justify-center overflow-hidden rounded-[10px] p-4 transition-transform hover:-translate-y-0.5 ${
-                          s.dark === true ? 'bg-ink' : 'bg-paper-warm'
+                          String(s.dark) === 'true' ? 'bg-ink' : 'bg-paper-warm'
                         }`}
                       >
                         <img
@@ -53,7 +53,7 @@ export function Sponsors() {
                           alt={s.name}
                           loading="lazy"
                           className={`max-h-full max-w-full object-contain [mix-blend-mode:multiply] ${
-                            s.dark === true ? '![mix-blend-mode:normal]' : ''
+                            String(s.dark) === 'true' ? '![mix-blend-mode:normal]' : ''
                           }`}
                         />
                       </div>
