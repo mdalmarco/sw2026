@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#F5F0E8"/>
+  <rect x="0" y="0" width="800" height="500" fill="url(#g1)"/>
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5F0E8;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#EDE8DC;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <!-- mochila simples -->
+  <rect x="310" y="140" width="180" height="200" rx="20" fill="#E8571E" opacity="0.15"/>
+  <rect x="330" y="120" width="140" height="40" rx="10" fill="#E8571E" opacity="0.2"/>
+  <rect x="355" y="200" width="90" height="70" rx="8" fill="#E8571E" opacity="0.25"/>
+  <circle cx="400" cy="240" r="12" fill="#E8571E" opacity="0.4"/>
+  <!-- alças -->
+  <path d="M340 160 Q300 200 300 300" stroke="#E8571E" stroke-width="16" fill="none" stroke-linecap="round" opacity="0.2"/>
+  <path d="M460 160 Q500 200 500 300" stroke="#E8571E" stroke-width="16" fill="none" stroke-linecap="round" opacity="0.2"/>
+  <!-- check items -->
+  <text x="160" y="410" font-family="Arial" font-size="13" fill="#B8A898" letter-spacing="3" text-anchor="middle">COMO SE PREPARAR · 6 MIN</text>
+  <text x="640" y="410" font-family="Arial" font-size="13" fill="#E8571E" letter-spacing="2" text-anchor="middle">STARTUP WEEKEND TIMBÓ</text>
+</svg>
