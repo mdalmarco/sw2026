@@ -183,7 +183,9 @@ export function Pricing() {
             ))}
           </ul>
           <a
-            href="#"
+            href={PRICING.symplaUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="block w-full rounded-lg bg-orange py-[18px] text-center font-display text-[0.9375rem] font-extrabold uppercase tracking-[0.06em] text-white transition-colors hover:bg-orange-dark"
           >
             Inscreva-se via Sympla →
