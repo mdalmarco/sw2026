@@ -11,19 +11,32 @@ export default function BlogPost() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    // Atualizar canonical para a URL do post
-    let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    if (link) {
-      link.href = `https://www.swtimbo.com.br/blog/${slug}`;
-    }
-    // Atualizar title
+    // Canonical
+    const link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    if (link) link.href = `https://www.swtimbo.com.br/blog/${slug}`;
+    // Title
+    if (post) document.title = `${post.title} · Startup Weekend Timbó 2026`;
+    // OG meta tags
+    const setMeta = (prop: string, content: string) => {
+      let el = document.querySelector(`meta[property="${prop}"]`) as HTMLMetaElement
+        || document.querySelector(`meta[name="${prop}"]`) as HTMLMetaElement;
+      if (el) el.content = content;
+    };
     if (post) {
-      document.title = `${post.title} · Startup Weekend Timbó 2026`;
+      setMeta('og:title', `${post.title} · Startup Weekend Timbó`);
+      setMeta('og:description', post.excerpt);
+      setMeta('og:url', `https://www.swtimbo.com.br/blog/${slug}`);
+      setMeta('og:image', `https://www.swtimbo.com.br/api/og?slug=${slug}`);
+      setMeta('twitter:title', `${post.title} · Startup Weekend Timbó`);
+      setMeta('twitter:description', post.excerpt);
+      setMeta('twitter:image', `https://www.swtimbo.com.br/api/og?slug=${slug}`);
     }
     return () => {
-      // Restaurar canonical da home ao sair
       if (link) link.href = 'https://www.swtimbo.com.br/';
       document.title = 'Startup Weekend Timbó 2026 · 54 horas para tirar uma ideia do papel';
+      setMeta('og:title', 'Startup Weekend Timbó 2026 · 54 horas para tirar uma ideia do papel');
+      setMeta('og:url', 'https://www.swtimbo.com.br/');
+      setMeta('og:image', 'https://www.swtimbo.com.br/api/og');
     };
   }, [slug, post]);
 
