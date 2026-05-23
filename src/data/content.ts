@@ -175,7 +175,7 @@ export const BLOG_POSTS = [
   {
     meta: 'Como se preparar · 6 min',
     title: 'O que levar (e o que não levar) na sua mochila para o Startup Weekend',
-    excerpt: 'Um checklist prático com tudo que você precisa para aproveitar o fim de semana sem perder tempo com logística.',
+    excerpt: 'Checklist prático para o Startup Weekend Timbó 2026 — o que levar, o que não levar, e o que o evento já fornece.',
     image: '/images/blog_mochila.svg',
     slug: 'o-que-levar-na-mochila',
     body: [
@@ -217,14 +217,14 @@ export const BLOG_POSTS = [
       'Ele chegou na sexta sem ideia, entrou no time de uma plataforma de cursos profissionalizantes para jovens do interior e virou o responsável pela estratégia de vendas e pelos contatos com escolas da região.',
       '"Saí de lá com um time, com um produto, com um contato que virou parceiro de negócio e com clareza do que eu quero fazer. Valeu cada hora de sono perdido."',
       '## O padrão que se repete',
-      'As três histórias têm algo em comum: nenhuma dessas pessoas chegou com uma ideia. Todas chegaram com disposição. E foi suficiente.',
+      'As três histórias têm algo em comum: nenhuma dessas pessoas chegou com uma ideia. Todas chegaram com disposição. Em Timbó, no Vale do Itajaí, isso foi suficiente.',
       'O Startup Weekend não é um evento para quem já sabe o que vai fazer. É para quem quer descobrir o que é capaz de construir quando colocado num ambiente de pressão, colaboração e propósito.',
     ],
   },
   {
     meta: 'Sobre o evento · 5 min',
     title: 'Como funciona o pitch de 60 segundos da sexta-feira',
-    excerpt: 'A regra mais importante (e mais simples) do Startup Weekend explicada com exemplos reais de pitches que funcionaram.',
+    excerpt: 'A regra mais importante do Startup Weekend explicada com exemplos reais da edição 2025 em Timbó.',
     image: '/images/blog_pitch.svg',
     slug: 'pitch-60-segundos',
     body: [
@@ -244,7 +244,7 @@ export const BLOG_POSTS = [
       '## Você não precisa ter a ideia vencedora',
       'A ideia que você apresenta na sexta não precisa ser a que vai vencer no domingo. Precisa ser boa o suficiente para atrair um time. A partir daí, o time transforma, valida e reconstrói a ideia ao longo do fim de semana.',
       'Alguns dos projetos mais interessantes que saíram de edições anteriores começaram com pitches simples, quase tímidos. O que fez a diferença foi o time que se formou ao redor.',
-      'Se você tiver uma ideia na cabeça: vai lá. 60 segundos. É agora.',
+      'Se você tiver uma ideia na cabeça: vai lá. 60 segundos. CETISA, Timbó, agosto de 2026. É agora.',
     ],
   },
 ];
