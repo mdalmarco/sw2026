@@ -1,3 +1,4 @@
+import { Routes, Route } from 'react-router-dom';
 import AureaGlow from './components/AureaGlow';
 import Nav from './components/Nav';
 import Hero from './components/Hero';
@@ -6,13 +7,12 @@ import { QuoteBreak, ForWho, Vibe } from './components/Sections2';
 import { Blog, Takeaways, Mentors } from './components/Sections3';
 import { Venue, Past, Pricing } from './components/Sections4';
 import { Sponsors, FAQ, FinalCTA, MobileStickyCTA, Footer } from './components/Sections5';
+import BlogPost from './pages/BlogPost';
 
-export default function App() {
+function Home() {
   return (
     <>
-      {/* Efeito áurea que segue o cursor */}
       <AureaGlow />
-
       <Nav />
 
       <main className="pb-0 max-md:pb-20">
@@ -65,5 +65,14 @@ export default function App() {
       <MobileStickyCTA />
       <Footer />
     </>
+  );
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/blog/:slug" element={<BlogPost />} />
+    </Routes>
   );
 }
