@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import AureaGlow from './components/AureaGlow';
 import Nav from './components/Nav';
 import Hero from './components/Hero';
@@ -70,9 +71,12 @@ function Home() {
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/blog/:slug" element={<BlogPost />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
+      </Routes>
+      <Analytics />
+    </>
   );
 }
