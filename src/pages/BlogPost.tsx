@@ -91,6 +91,29 @@ export default function BlogPost() {
             )}
           </div>
 
+          {/* Outros artigos */}
+          <div className="mt-14">
+            <h2 className="mb-4 font-display text-[0.75rem] font-bold uppercase tracking-[0.1em] text-ink-faint">
+              Continue lendo
+            </h2>
+            <div className="space-y-3">
+              {BLOG_POSTS.filter((p) => p.slug !== slug).map((p) => (
+                <Link
+                  key={p.slug}
+                  to={`/blog/${p.slug}`}
+                  className="block rounded-lg border border-[var(--line-soft)] p-4 transition-all hover:border-orange hover:shadow-sm"
+                >
+                  <div className="mb-1 font-display text-[0.6875rem] font-bold uppercase tracking-[0.08em] text-orange">
+                    {p.meta}
+                  </div>
+                  <div className="font-display text-[0.9375rem] font-bold text-ink">
+                    {p.title}
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
           {/* CTA de fechamento */}
           <div className="mt-16 rounded-xl border border-[var(--line-soft)] bg-paper-warm p-8 text-center">
             <p className="mb-4 font-display text-[1.0625rem] font-bold text-ink">
