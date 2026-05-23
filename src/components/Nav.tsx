@@ -14,7 +14,7 @@ export default function Nav() {
       >
         <a href="/" className="flex items-center">
           <img
-            src="/images/logo_sw_timbo.jpg"
+            src="/images/logo_sw_timbo.webp"
             alt="Techstars Startup Weekend Timbó"
             className="h-28 w-auto max-md:h-20 my-[-14px] object-contain [mix-blend-mode:multiply]"
           />
