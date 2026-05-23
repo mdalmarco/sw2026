@@ -27,9 +27,13 @@ export default function Hero() {
         </div>
 
         {/* Headline */}
-        <h1 className="mt-1 max-w-[16ch] font-display text-[clamp(2.5rem,6.8vw,4.75rem)] font-black leading-[1.05] tracking-[-0.032em]">
-          54 horas para tirar uma <span className="text-orange">ideia do papel</span> e
-          descobrir do que você é capaz.
+        <h1
+          className="mt-1 max-w-[16ch] font-display text-[clamp(2.5rem,6.8vw,4.75rem)] font-black leading-[1.05] tracking-[-0.032em]"
+          aria-label="54 horas para tirar uma ideia do papel e descobrir do que você é capaz."
+        >
+          54 horas para tirar uma{' '}
+          <span className="text-orange" aria-hidden="true">ideia do papel</span>
+          {' '}e descobrir do que você é capaz.
         </h1>
 
         {/* Subheadline */}
