@@ -114,13 +114,12 @@ export function Blog() {
                     Ler artigo →
                   </span>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {active && <BlogModal post={active} onClose={() => setActive(null)} />}
     </>
   );
 }
