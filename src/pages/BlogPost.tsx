@@ -41,11 +41,11 @@ export default function BlogPost() {
           <nav className="mb-8" aria-label="Breadcrumb">
             <ol className="flex items-center gap-2 font-display text-[0.75rem] font-semibold uppercase tracking-[0.1em] text-ink-faint">
               <li>
-                <Link to="/" className="transition-colors hover:text-orange">Início</Link>
+                <Link to="/" className="transition-colors hover:text-orange">Startup Weekend Timbó</Link>
               </li>
               <li aria-hidden="true">·</li>
               <li>
-                <Link to="/#blog" className="transition-colors hover:text-orange">Blog</Link>
+                <Link to="/" className="transition-colors hover:text-orange">Blog</Link>
               </li>
               <li aria-hidden="true">·</li>
               <li className="text-ink-muted">{post.title.slice(0, 40)}…</li>
@@ -132,10 +132,10 @@ export default function BlogPost() {
           {/* Voltar */}
           <div className="mt-10 text-center">
             <Link
-              to="/#blog"
+              to="/"
               className="font-display text-[0.8125rem] font-bold uppercase tracking-wider text-ink-muted transition-colors hover:text-orange"
             >
-              ← Outros artigos
+              ← Mais artigos sobre o Startup Weekend Timbó
             </Link>
           </div>
         </article>
