@@ -11,7 +11,21 @@ export default function BlogPost() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [slug]);
+    // Atualizar canonical para a URL do post
+    let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    if (link) {
+      link.href = `https://www.swtimbo.com.br/blog/${slug}`;
+    }
+    // Atualizar title
+    if (post) {
+      document.title = `${post.title} · Startup Weekend Timbó 2026`;
+    }
+    return () => {
+      // Restaurar canonical da home ao sair
+      if (link) link.href = 'https://www.swtimbo.com.br/';
+      document.title = 'Startup Weekend Timbó 2026 · 54 horas para tirar uma ideia do papel';
+    };
+  }, [slug, post]);
 
   if (!post) {
     return (
