@@ -81,10 +81,10 @@ export function Blog() {
           />
           <div className="mt-8 grid grid-cols-3 gap-6 max-md:grid-cols-1">
             {BLOG_POSTS.map((post) => (
-              <article
+              <Link
                 key={post.title}
-                onClick={() => setActive(post)}
-                className="group cursor-pointer overflow-hidden rounded-xl bg-paper transition-all hover:-translate-y-1 hover:shadow-[0_8px_24px_oklch(0_0_0_/_0.06)]"
+                to={`/blog/${post.slug}`}
+                className="group block overflow-hidden rounded-xl bg-paper transition-all hover:-translate-y-1 hover:shadow-[0_8px_24px_oklch(0_0_0_/_0.06)]"
               >
                 <div className="aspect-[16/10] overflow-hidden bg-gradient-to-br from-paper-warm to-paper-warmer">
                   {post.image ? (
