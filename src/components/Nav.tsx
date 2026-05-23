@@ -12,7 +12,7 @@ export default function Nav() {
         className="mx-auto flex max-w-[1200px] items-center justify-between px-8 py-4 max-md:px-5"
         aria-label="Navegação principal"
       >
-        <a href="#" className="flex items-center">
+        <a href="/" className="flex items-center">
           <img
             src="/images/logo_sw_timbo.jpg"
             alt="Techstars Startup Weekend Timbó"
