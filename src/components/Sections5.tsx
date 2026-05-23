@@ -238,7 +238,7 @@ export function Footer() {
               {['Instagram @sw.timbo', 'LinkedIn', 'Techstars Global'].map((l) => (
                 <li key={l}>
                   <a
-                    href="#"
+                    href="/"
                     className="font-body text-[0.9375rem] leading-[1.5] text-[oklch(0.85_0.01_60)] no-underline hover:text-orange"
                   >
                     {l}
