@@ -318,7 +318,7 @@ export const TESTIMONIALS = [
     quote: 'Fui sem saber o que esperar e saí transformada. Aprendi como uma ideia vira um negócio.',
     name: 'Siene Pacher',
     role: 'Equipe Ponto Seguro · Edição 2025',
-    photo: '/images/Siene_Pacher.png',
+    photo: '/images/Siene_Pacher.webp',
     result: 'Reconectou-se com criatividade e coragem para seguir projetos',
   },
 ];
@@ -365,11 +365,11 @@ export const PAST_STATS = [
 // Locais e Estaduais: logos reais. Globais: aguardando.
 export const SPONSORS: Record<'global'|'estadual'|'local', { name: string; logo: string; dark: boolean | 'warm' }[]> = {
   global: [
-    { name: 'Google for Startups', logo: '/images/sponsors/google_startups.png', dark: 'warm' },
-    { name: 'Deel',                logo: '/images/sponsors/deel.png',            dark: 'warm' },
-    { name: 'Mercury',             logo: '/images/sponsors/mercury.png',         dark: 'warm' },
-    { name: 'HSBC Innovation Banking', logo: '/images/sponsors/hsbc.png',        dark: 'warm' },
-    { name: 'Brex',                logo: '/images/sponsors/brex.png',            dark: 'warm' },
+    { name: 'Google for Startups', logo: '/images/sponsors/google_startups.webp', dark: 'warm' },
+    { name: 'Deel',                logo: '/images/sponsors/deel.webp',            dark: 'warm' },
+    { name: 'Mercury',             logo: '/images/sponsors/mercury.webp',         dark: 'warm' },
+    { name: 'HSBC Innovation Banking', logo: '/images/sponsors/hsbc.webp',        dark: 'warm' },
+    { name: 'Brex',                logo: '/images/sponsors/brex.webp',            dark: 'warm' },
   ],
   estadual: [
     // Logos com dark:false ficam em slot claro; o conteúdo já é escuro/colorido
@@ -386,10 +386,10 @@ export const SPONSORS: Record<'global'|'estadual'|'local', { name: string; logo:
     // TODO: reenviar (vieram corrompidos): AWS, Hostinger, Inova, Midihub, nd, Nexpon, WOW, Sebrae, 49 Educação
   ],
   local: [
-    { name: 'Conecta AMVE Timbó',         logo: '/images/sponsors/conecta_amve.jpg',  dark: 'warm' },
-    { name: 'CIB · Gene Conecta',          logo: '/images/sponsors/cib_gene.jpg',      dark: 'warm' },
-    { name: 'ACATE Blusoft · Vale Europeu',logo: '/images/sponsors/acate_blusoft.jpg', dark: 'warm' },
-    { name: 'CETISA',                      logo: '/images/sponsors/cetisa.jpg',        dark: 'warm' },
+    { name: 'Conecta AMVE Timbó',         logo: '/images/sponsors/conecta_amve.webp',  dark: 'warm' },
+    { name: 'CIB · Gene Conecta',          logo: '/images/sponsors/cib_gene.webp',      dark: 'warm' },
+    { name: 'ACATE Blusoft · Vale Europeu',logo: '/images/sponsors/acate_blusoft.webp', dark: 'warm' },
+    { name: 'CETISA',                      logo: '/images/sponsors/cetisa.webp',        dark: 'warm' },
   ],
 };
 
