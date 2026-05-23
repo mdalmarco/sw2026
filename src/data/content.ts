@@ -435,4 +435,12 @@ export const FAQ = [
     q: 'Em quais condições posso pedir reembolso?',
     a: 'Reembolsos integrais são possíveis até 7 dias antes do evento. Após esse prazo, podemos transferir sua inscrição para outra pessoa. Detalhes nas políticas da plataforma.',
   },
+  {
+    q: 'O que acontece nas 54 horas do Startup Weekend?',
+    a: 'Sexta à noite: pitches de 60 segundos e formação de times. Sábado inteiro: desenvolvimento do produto com apoio de mentores. Domingo: finalização e apresentação para jurados. Tudo presencial, na CETISA, em Timbó.',
+  },
+  {
+    q: 'O Startup Weekend Timbó tem certificado?',
+    a: 'Sim. Todos os participantes recebem certificado oficial Techstars ao final do evento, válido como experiência em empreendedorismo e inovação.',
+  },
 ];
