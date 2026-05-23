@@ -195,9 +195,9 @@ export function Footer() {
             </p>
           </div>
           <div>
-            <h4 className="mb-4 font-display text-[0.6875rem] font-bold uppercase tracking-[0.12em] text-orange">
+            <h3 className="mb-4 font-display text-[0.6875rem] font-bold uppercase tracking-[0.12em] text-orange">
               Evento
-            </h4>
+            </h3>
             <ul className="grid gap-2.5">
               {[
                 { label: 'O que é', href: '#o-que-e' },
@@ -218,9 +218,9 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="mb-4 font-display text-[0.6875rem] font-bold uppercase tracking-[0.12em] text-orange">
+            <h3 className="mb-4 font-display text-[0.6875rem] font-bold uppercase tracking-[0.12em] text-orange">
               Contato
-            </h4>
+            </h3>
             <ul className="grid gap-2.5 font-body text-[0.9375rem] leading-[1.5] text-[oklch(0.85_0.01_60)]">
               <li>{EVENT.contact.email}</li>
               {EVENT.contact.people.map((p) => (
@@ -231,9 +231,9 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="mb-4 font-display text-[0.6875rem] font-bold uppercase tracking-[0.12em] text-orange">
+            <h3 className="mb-4 font-display text-[0.6875rem] font-bold uppercase tracking-[0.12em] text-orange">
               Siga
-            </h4>
+            </h3>
             <ul className="grid gap-2.5">
               {['Instagram @sw.timbo', 'LinkedIn', 'Techstars Global'].map((l) => (
                 <li key={l}>
