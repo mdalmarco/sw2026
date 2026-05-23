@@ -2,7 +2,42 @@ import { ImageResponse } from '@vercel/og';
 
 export const config = { runtime: 'edge' };
 
-export default function handler() {
+const POSTS: Record<string, { title: string; meta: string; highlight: string }> = {
+  'o-que-levar-na-mochila': {
+    title: 'O que levar na\nmochila para o\nStartup Weekend',
+    meta: 'COMO SE PREPARAR · 6 MIN',
+    highlight: 'mochila',
+  },
+  'cheguei-sem-ideia': {
+    title: 'Cheguei sem ideia:\n3 histórias de\nquem participou',
+    meta: 'HISTÓRIAS · 8 MIN',
+    highlight: 'sem ideia',
+  },
+  'pitch-60-segundos': {
+    title: 'Como funciona o\npitch de 60\nsegundos',
+    meta: 'SOBRE O EVENTO · 5 MIN',
+    highlight: '60 segundos',
+  },
+};
+
+export default function handler(req: Request) {
+  const { searchParams } = new URL(req.url);
+  const slug = searchParams.get('slug');
+  const post = slug ? POSTS[slug] : null;
+
+  // Se tem slug, gera imagem do post. Senão, imagem da home.
+  const badge = post ? post.meta : 'TECHSTARS · 14–16 AGO 2026';
+  const lines = post
+    ? post.title.split('\n')
+    : ['54 horas para', 'tirar uma ideia', 'do papel.'];
+  const accentLine = post ? 1 : 1; // segunda linha em laranja
+  const footer = post
+    ? 'swtimbo.com.br/blog'
+    : 'swtimbo.com.br';
+  const subinfo = post
+    ? 'Startup Weekend Timbó 2026'
+    : '14 — 16 ago 2026  ·  CETISA · Timbó, SC';
+
   return new ImageResponse(
     <div
       style={{
@@ -14,193 +49,93 @@ export default function handler() {
         overflow: 'hidden',
       }}
     >
-      {/* Gradiente atmosférico — igual ao Hero */}
       <div style={{
         position: 'absolute', inset: 0,
         background: 'radial-gradient(circle at 18% 28%, rgba(245,220,180,0.7) 0%, transparent 42%), radial-gradient(circle at 82% 72%, rgba(195,225,245,0.55) 0%, transparent 38%)',
         display: 'flex',
       }} />
-
-      {/* Barra laranja esquerda */}
       <div style={{
         position: 'absolute', top: 0, left: 0,
         width: '7px', height: '630px',
-        background: '#E8571E',
-        display: 'flex',
+        background: '#E8571E', display: 'flex',
       }} />
 
-      {/* Conteúdo principal */}
       <div style={{
-        position: 'absolute',
-        top: 0, left: 0, right: 0, bottom: 0,
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        padding: '0 80px 0 88px',
+        position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
+        display: 'flex', flexDirection: 'column',
+        justifyContent: 'center', padding: '0 80px 0 88px',
       }}>
-
-        {/* Badge topo */}
         <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '12px',
-          marginBottom: '36px',
+          display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '36px',
         }}>
+          <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#E8571E', display: 'flex' }} />
           <div style={{
-            width: '8px', height: '8px', borderRadius: '50%',
-            background: '#E8571E',
-            display: 'flex',
-          }} />
-          <div style={{
-            fontFamily: 'Arial Narrow, Arial, sans-serif',
-            fontSize: '15px',
-            fontWeight: '700',
-            color: '#3D3D3D',
-            letterSpacing: '3px',
-            textTransform: 'uppercase',
-            display: 'flex',
+            fontFamily: 'Arial, sans-serif', fontSize: '15px', fontWeight: '700',
+            color: '#3D3D3D', letterSpacing: '3px', display: 'flex',
           }}>
-            TECHSTARS STARTUP WEEKEND
-          </div>
-          <div style={{
-            background: '#ECE3D8',
-            borderRadius: '4px',
-            padding: '4px 12px',
-            fontFamily: 'Arial, sans-serif',
-            fontSize: '13px',
-            fontWeight: '700',
-            color: '#6B6B6B',
-            letterSpacing: '1px',
-            display: 'flex',
-          }}>
-            SW TIMBÓ · 2ª EDIÇÃO
+            {badge}
           </div>
         </div>
 
-        {/* Headline — 3 linhas igual ao Hero */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', marginBottom: '40px' }}>
-          <div style={{
-            fontFamily: 'Arial Black, Arial, sans-serif',
-            fontSize: '88px',
-            fontWeight: '900',
-            color: '#1A1A1A',
-            lineHeight: '1.0',
-            display: 'flex',
-          }}>
-            54 horas para
-          </div>
-          <div style={{
-            fontFamily: 'Arial Black, Arial, sans-serif',
-            fontSize: '88px',
-            fontWeight: '900',
-            color: '#E8571E',
-            lineHeight: '1.0',
-            display: 'flex',
-          }}>
-            tirar uma ideia
-          </div>
-          <div style={{
-            fontFamily: 'Arial Black, Arial, sans-serif',
-            fontSize: '88px',
-            fontWeight: '900',
-            color: '#1A1A1A',
-            lineHeight: '1.0',
-            display: 'flex',
-          }}>
-            do papel.
-          </div>
+          {lines.map((line, i) => (
+            <div key={i} style={{
+              fontFamily: 'Arial Black, sans-serif',
+              fontSize: post ? '76px' : '88px',
+              fontWeight: '900',
+              color: i === accentLine ? '#E8571E' : '#1A1A1A',
+              lineHeight: '1.0', display: 'flex',
+            }}>
+              {line}
+            </div>
+          ))}
         </div>
 
-        {/* Rodapé — data + local + URL */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
           <div style={{
-            fontFamily: 'Arial, sans-serif',
-            fontSize: '22px',
-            fontWeight: '700',
-            color: '#3D3D3D',
-            display: 'flex',
+            fontFamily: 'Arial, sans-serif', fontSize: '22px',
+            color: '#6B6B6B', display: 'flex',
           }}>
-            14 — 16 ago 2026
+            {subinfo}
           </div>
+          <div style={{ width: '4px', height: '4px', borderRadius: '50%', background: '#C0B4A4', display: 'flex' }} />
           <div style={{
-            width: '4px', height: '4px', borderRadius: '50%',
-            background: '#E8571E', display: 'flex',
-          }} />
-          <div style={{
-            fontFamily: 'Arial, sans-serif',
-            fontSize: '22px',
-            color: '#6B6B6B',
-            display: 'flex',
+            fontFamily: 'Arial, sans-serif', fontSize: '22px',
+            fontWeight: '700', color: '#E8571E', display: 'flex',
           }}>
-            CETISA · Timbó, SC
-          </div>
-          <div style={{
-            width: '4px', height: '4px', borderRadius: '50%',
-            background: '#C0B4A4', display: 'flex',
-          }} />
-          <div style={{
-            fontFamily: 'Arial, sans-serif',
-            fontSize: '22px',
-            fontWeight: '700',
-            color: '#E8571E',
-            display: 'flex',
-          }}>
-            swtimbo.com.br
+            {footer}
           </div>
         </div>
       </div>
 
-      {/* Elemento decorativo direito — círculos SW/Timbó */}
       <div style={{
-        position: 'absolute',
-        right: '-20px',
-        top: '50%',
+        position: 'absolute', right: '-20px', top: '50%',
         transform: 'translateY(-50%)',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: '320px',
-        height: '320px',
+        display: 'flex', flexDirection: 'column',
+        alignItems: 'center', justifyContent: 'center',
+        width: '320px', height: '320px',
       }}>
         <div style={{
-          position: 'absolute',
-          width: '300px', height: '300px',
-          borderRadius: '50%',
-          border: '2px solid rgba(232,87,30,0.12)',
-          display: 'flex',
+          position: 'absolute', width: '300px', height: '300px',
+          borderRadius: '50%', border: '2px solid rgba(232,87,30,0.12)', display: 'flex',
         }} />
         <div style={{
-          position: 'absolute',
-          width: '220px', height: '220px',
-          borderRadius: '50%',
-          border: '2px solid rgba(232,87,30,0.10)',
-          display: 'flex',
+          position: 'absolute', width: '220px', height: '220px',
+          borderRadius: '50%', border: '2px solid rgba(232,87,30,0.10)', display: 'flex',
         }} />
         <div style={{
-          position: 'absolute',
-          width: '130px', height: '130px',
-          borderRadius: '50%',
-          background: 'rgba(232,87,30,0.07)',
-          display: 'flex',
+          position: 'absolute', width: '130px', height: '130px',
+          borderRadius: '50%', background: 'rgba(232,87,30,0.07)', display: 'flex',
         }} />
         <div style={{
-          fontFamily: 'Arial Black, sans-serif',
-          fontSize: '64px',
-          fontWeight: '900',
-          color: '#E8571E',
-          opacity: 0.18,
-          lineHeight: 1,
-          display: 'flex',
+          fontFamily: 'Arial Black, sans-serif', fontSize: '64px',
+          fontWeight: '900', color: '#E8571E', opacity: 0.18,
+          lineHeight: 1, display: 'flex',
         }}>SW</div>
         <div style={{
-          fontFamily: 'Arial Black, sans-serif',
-          fontSize: '28px',
-          fontWeight: '900',
-          color: '#2BA8E0',
-          opacity: 0.22,
-          marginTop: '-8px',
-          display: 'flex',
+          fontFamily: 'Arial Black, sans-serif', fontSize: '28px',
+          fontWeight: '900', color: '#2BA8E0', opacity: 0.22,
+          marginTop: '-8px', display: 'flex',
         }}>Timbó</div>
       </div>
     </div>,
