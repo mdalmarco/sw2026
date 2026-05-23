@@ -1,69 +1,11 @@
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { SectionHeader } from './SectionHeader';
 import { BLOG_POSTS, TAKEAWAYS, MENTORS } from '../data/content';
 
 // ════════════════ BLOG ════════════════
-type BlogPost = (typeof import('../data/content').BLOG_POSTS)[number];
-
-function BlogModal({ post, onClose }: { post: BlogPost; onClose: () => void }) {
-  return (
-    <div
-      className="fixed inset-0 z-[200] flex items-start justify-center overflow-y-auto bg-black/50 px-4 py-12 backdrop-blur-sm"
-      onClick={onClose}
-    >
-      <article
-        className="relative w-full max-w-[720px] overflow-hidden rounded-2xl bg-paper shadow-[0_24px_64px_oklch(0_0_0_/_0.18)]"
-        onClick={(e) => e.stopPropagation()}
-      >
-        {/* Imagem de capa */}
-        {post.image && (
-          <div className="aspect-[16/7] overflow-hidden">
-            <img src={post.image} alt={post.title} className="h-full w-full object-cover" />
-          </div>
-        )}
-        <div className="p-8 max-md:p-6">
-          {/* Meta */}
-          <div className="mb-4 font-display text-[0.6875rem] font-bold uppercase tracking-[0.1em] text-orange">
-            {post.meta}
-          </div>
-          {/* Título */}
-          <h2 className="mb-6 font-display text-[1.5rem] font-extrabold leading-[1.2] text-ink max-md:text-[1.25rem]">
-            {post.title}
-          </h2>
-          {/* Corpo */}
-          <div className="space-y-4">
-            {(post.body ?? []).map((block: string, i: number) =>
-              block.startsWith('## ') ? (
-                <h3
-                  key={i}
-                  className="pt-4 font-display text-[1.0625rem] font-bold text-ink"
-                >
-                  {block.replace('## ', '')}
-                </h3>
-              ) : (
-                <p key={i} className="font-body text-[1rem] leading-[1.7] text-ink-soft">
-                  {block}
-                </p>
-              )
-            )}
-          </div>
-        </div>
-        {/* Botão fechar */}
-        <button
-          onClick={onClose}
-          aria-label="Fechar"
-          className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-paper/80 font-display text-[1.1rem] font-bold text-ink shadow backdrop-blur-sm transition hover:bg-orange hover:text-white"
-        >
-          ×
-        </button>
-      </article>
-    </div>
-  );
-}
 
 export function Blog() {
-  const [active, setActive] = useState<BlogPost | null>(null);
-
   return (
     <>
       <section id="blog" className="bg-paper-warm py-24" aria-labelledby="blog-title">
