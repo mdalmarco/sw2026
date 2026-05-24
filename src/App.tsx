@@ -7,7 +7,7 @@ import { ActivityStrip, WhatIs, HowItWorks } from './components/Sections1';
 import { QuoteBreak, ForWho, Vibe } from './components/Sections2';
 import { Blog, Takeaways, Mentors } from './components/Sections3';
 import { Venue, Past, Pricing } from './components/Sections4';
-import { Sponsors, FAQ, FinalCTA, MobileStickyCTA, Footer } from './components/Sections5';
+import { Press, Sponsors, FAQ, FinalCTA, MobileStickyCTA, Footer } from './components/Sections5';
 import BlogPost from './pages/BlogPost';
 
 function Home() {
@@ -58,6 +58,7 @@ function Home() {
         <Venue />
         <Past />
         <Pricing />
+        <Press />
         <Sponsors />
         <FAQ />
         <FinalCTA />
