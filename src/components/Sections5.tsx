@@ -1,6 +1,49 @@
 import { useState } from 'react';
 import { SectionHeader } from './SectionHeader';
-import { SPONSORS, FAQ as FAQ_DATA, EVENT, PRICING } from '../data/content';
+import { SPONSORS, FAQ as FAQ_DATA, EVENT, PRICING, PRESS } from '../data/content';
+
+// ════════════════ NA MÍDIA ════════════════
+export function Press() {
+  return (
+    <section className="bg-paper py-20" aria-labelledby="press-title">
+      <div className="mx-auto max-w-[1200px] px-8 max-md:px-5">
+        <div className="mb-10 flex items-center gap-4">
+          <h2
+            id="press-title"
+            className="font-display text-[0.6875rem] font-bold uppercase tracking-[0.15em] text-ink-muted"
+          >
+            Na mídia
+          </h2>
+          <div className="h-px flex-1 bg-[var(--line)]" />
+        </div>
+
+        <div className="grid grid-cols-2 gap-4 max-md:grid-cols-1">
+          {PRESS.map((item) => (
+            <a
+              key={item.url}
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-start gap-4 rounded-lg border border-[var(--line-soft)] p-5 transition-all hover:border-orange hover:shadow-sm"
+            >
+              <div className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-paper-warm font-display text-[0.5rem] font-bold uppercase text-ink-faint">
+                {item.type === 'vídeo' ? '▶' : item.type === 'página oficial' ? '★' : '📰'}
+              </div>
+              <div className="min-w-0">
+                <div className="mb-1 font-display text-[0.6875rem] font-bold uppercase tracking-[0.08em] text-orange">
+                  {item.source}
+                </div>
+                <div className="font-display text-[0.875rem] font-bold leading-[1.35] text-ink transition-colors group-hover:text-orange">
+                  {item.title}
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 // ════════════════ PATROCINADORES ════════════════
 export function Sponsors() {
