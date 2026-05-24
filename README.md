@@ -18,40 +18,46 @@ Site oficial do Techstars Startup Weekend Timbó — 2ª edição.
 - **Tailwind CSS 3** (design system customizado)
 - **React Router 6** (rotas SPA — home + blog)
 - **Vercel** (deploy, edge functions, domínio)
-- **@vercel/og** (imagem OG server-side para WhatsApp/Telegram)
+- **@vercel/og** (imagem OG dinâmica server-side por página)
+- **@vercel/analytics** (page views + web vitals)
 
 ## Estrutura
 
 ```
 sw2026/
 ├── api/
-│   └── og.tsx                  # Edge Function — gera imagem OG 1200×630
+│   ├── og.tsx                  # Edge Function — OG image dinâmica (/api/og?slug=xxx)
+│   └── prerender.ts            # HTML estático para bots/crawlers
 ├── public/
-│   ├── images/                 # Logos, mentores, fotos, blog
+│   ├── images/                 # Logos, mentores, fotos, blog (WebP)
 │   │   └── sponsors/           # Logos de patrocinadores (global/estadual/local)
 │   ├── robots.txt
-│   ├── sitemap.xml
+│   ├── sitemap.xml             # 9 URLs indexáveis
 │   └── google564f...html       # Google Search Console verification
 ├── src/
 │   ├── main.tsx                # Entry point + BrowserRouter
-│   ├── App.tsx                 # Routes: / (Home) + /blog/:slug
+│   ├── App.tsx                 # Routes: / (Home) + /blog/:slug + Analytics
 │   ├── data/
-│   │   └── content.ts          # Todo o conteúdo centralizado
+│   │   └── content.ts          # Todo o conteúdo centralizado + related posts
 │   ├── components/
-│   │   ├── Nav.tsx             # Navbar com logo oficial SW Timbó
+│   │   ├── Nav.tsx             # Navbar com logo oficial SW Timbó (WebP)
 │   │   ├── Hero.tsx            # Hero com headline + contador dinâmico
 │   │   ├── AureaGlow.tsx       # Efeito gradiente que segue o cursor
 │   │   ├── SectionHeader.tsx   # Header reutilizável de seções
 │   │   ├── Sections1.tsx       # ActivityStrip, WhatIs, HowItWorks
 │   │   ├── Sections2.tsx       # QuoteBreak, ForWho, Vibe
-│   │   ├── Sections3.tsx       # Blog, Takeaways, Mentors
+│   │   ├── Sections3.tsx       # Blog (cards com Link), Takeaways, Mentors
 │   │   ├── Sections4.tsx       # Venue, Past, Pricing
-│   │   └── Sections5.tsx       # Sponsors, FAQ, FinalCTA, Footer
+│   │   └── Sections5.tsx       # Press, Sponsors, FAQ, FinalCTA, Footer
 │   └── pages/
-│       └── BlogPost.tsx        # Página de post individual (/blog/:slug)
-├── index.html                  # Meta tags, OG, Schema.org, canonical
+│       └── BlogPost.tsx        # Post individual com interlinkagem curada
+├── .claude/
+│   └── skills/
+│       ├── humanizer/          # Skill: detecta e remove padrões de escrita IA
+│       └── u-fe-validate/      # Skill: auditoria frontend (Siegard)
+├── index.html                  # Meta tags, OG, Schema.org (Event+FAQ+Article), canonical
 ├── tailwind.config.js          # Paleta customizada (orange, blue, paper, ink)
-├── vercel.json                 # Rewrites SPA + headers
+├── vercel.json                 # Rewrites SPA + cache headers + CORS
 └── package.json
 ```
 
@@ -72,26 +78,61 @@ sw2026/
 
 ## SEO & Discoverability
 
-- **Schema.org**: Event (com offers, performers, image), FAQPage (12 perguntas), Article (3 posts)
-- **Open Graph**: Imagem server-side via `/api/og` (Edge Function @vercel/og)
-- **Sitemap**: 4 URLs (home + 3 posts de blog)
-- **Canonical**: `https://www.swtimbo.com.br/`
-- **Blog indexável**: Rotas `/blog/:slug` com breadcrumb, interlinkagem e CTA
-- **Google Search Console**: Verificado e sitemap enviado
+- **Schema.org**: Event (offers, performers, image, capacity), FAQPage (12 perguntas), Article (8 posts)
+- **Open Graph**: Imagem dinâmica por página via `/api/og?slug=xxx` (Edge Function)
+- **Sitemap**: 9 URLs (home + 8 posts de blog)
+- **Canonical**: Dinâmico por página (home = `/`, posts = `/blog/:slug`)
+- **Blog indexável**: Rotas `/blog/:slug` com breadcrumb, interlinkagem curada e CTA
+- **Interlinkagem**: 2 links curados por post ("Próximo passo" + "Leia também") baseados em jornada do leitor
+- **Prerender API**: HTML estático para bots que não executam JavaScript
+- **Noscript links**: 8 links no `<noscript>` para crawlers
+- **Google Search Console**: Verificado (meta tag) + sitemap enviado
+- **robots.txt**: Permite tudo + referência ao sitemap
 
-## Blog
+## Performance
 
-| Slug | Título |
-|------|--------|
-| `/blog/o-que-levar-na-mochila` | O que levar (e o que não levar) na sua mochila |
-| `/blog/cheguei-sem-ideia` | "Cheguei sem ideia": 3 histórias reais |
-| `/blog/pitch-60-segundos` | Como funciona o pitch de 60 segundos |
+- **Async font loading**: Google Fonts não bloqueia renderização (media="print" + onload swap)
+- **WebP**: Todas as logos e fotos convertidas (-538KB total, ~65% menor)
+- **Cache headers**: Assets JS/CSS imutáveis 1 ano, imagens 1 semana
+- **Lazy loading**: Todas as imagens abaixo da dobra
+- **PageSpeed**: Desktop 99/97/100/100 · Mobile 88/97/100/100
+
+## Blog (8 posts)
+
+Todos os posts passaram pelo **Humanizer** (remoção de padrões de escrita IA).
+
+| Slug | Título | Cluster |
+|------|--------|---------|
+| `/blog/o-que-levar-na-mochila` | O que levar na mochila para o Startup Weekend | Preparação |
+| `/blog/cheguei-sem-ideia` | "Cheguei sem ideia": como funciona para quem não tem projeto | Objeções |
+| `/blog/pitch-60-segundos` | Como funciona o pitch de 60 segundos | Dinâmica |
+| `/blog/preciso-ter-uma-ideia-startup-weekend` | Preciso ter uma ideia pronta? | Objeções |
+| `/blog/como-nasce-uma-startup-em-54-horas` | Como nasce uma startup em 54 horas | Dinâmica (hub) |
+| `/blog/coisas-que-ninguem-te-conta-startup-weekend` | 5 coisas que ninguém te conta | Bastidores |
+| `/blog/ecossistema-startups-vale-do-itajai` | Como está o ecossistema no Vale do Itajaí | Regional |
+| `/blog/o-que-acontece-depois-startup-weekend` | O que acontece depois do Startup Weekend? | Pós-evento |
+
+### Interlinkagem
+
+Hub central: **"Como nasce uma startup em 54 horas"** (recebe 5 links de entrada).
+Cada post tem 2 links curados: "Próximo passo" (continuação natural) e "Leia também" (aprofundamento).
+
+## Na Mídia (8 links)
+
+Cobertura da edição 2025: Economia SC, Instituto Gene (2x), Jornal do Médio Vale (2x), Trentina FM, Techstars, YouTube.
 
 ## Patrocinadores
 
 **Globais**: Google for Startups, Deel, Mercury, HSBC Innovation Banking, Brex
 **Estaduais**: FAPESC, ACATE, Startup SC, Senior, Magazord, Dati, Questum, KLAB, Notion, Investidores.vc
 **Locais**: Conecta AMVE Timbó, CIB · Gene Conecta, ACATE Blusoft · Vale Europeu, CETISA
+
+## Skills instaladas
+
+| Skill | Função |
+|-------|--------|
+| **Humanizer** (`.claude/skills/humanizer/`) | Detecta e remove padrões de escrita IA (baseado em Wikipedia AI Cleanup) |
+| **Siegard /u-fe-validate** (`.claude/skills/u-fe-validate/`) | Auditoria frontend: 25 regras, 72 checks de qualidade |
 
 ## Dev
 
@@ -104,6 +145,8 @@ npm run build    # tsc + vite build → dist/
 ## Deploy
 
 Push para `main` → Vercel build automático → `swtimbo.com.br`
+
+3 funções serverless: `api/og.tsx` (Edge), `api/prerender.ts` (Node), verificação Google.
 
 ---
 
