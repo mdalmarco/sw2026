@@ -146,7 +146,7 @@ npm run build    # tsc + vite build → dist/
 
 Push para `main` → Vercel build automático → `swtimbo.com.br`
 
-3 funções serverless: `api/og.tsx` (Edge), `api/prerender.ts` (Node), verificação Google.
+O Vercel roda 3 funções serverless além do site: `api/og.tsx` (imagem OG dinâmica), `api/prerender.ts` (HTML para crawlers) e o arquivo de verificação do Google Search Console.
 
 ---
 
