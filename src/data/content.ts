@@ -178,6 +178,7 @@ export const BLOG_POSTS = [
     excerpt: 'Checklist prático para o Startup Weekend Timbó 2026. O que levar, o que não levar, e o que o evento já fornece.',
     image: '/images/blog_mochila.svg',
     slug: 'o-que-levar-na-mochila',
+    related: ['pitch-60-segundos', 'coisas-que-ninguem-te-conta-startup-weekend'],
     body: [
       'O Startup Weekend dura 54 horas. Da sexta à noite até o domingo à noite. Não parece muito, mas o tempo some rápido quando você está construindo um produto com gente que conheceu há poucas horas.',
       'Na edição de 2025 no Centro Empresarial de Timbó, quem chegou com o básico resolvido conseguiu focar no que importava. Quem ficou procurando carregador ou agasalho perdeu tempo que não volta.',
@@ -201,6 +202,7 @@ export const BLOG_POSTS = [
     excerpt: 'A maioria dos participantes chega sem ideia. Na edição de 2025, 34 pessoas participaram e 7 projetos nasceram de combinações que ninguém previu.',
     image: '/images/blog_historias.svg',
     slug: 'cheguei-sem-ideia',
+    related: ['preciso-ter-uma-ideia-startup-weekend', 'como-nasce-uma-startup-em-54-horas'],
     body: [
       'A pergunta mais comum antes de um Startup Weekend é "preciso ter uma ideia?" A resposta é não. Na edição de 2025 em Timbó, 34 participantes se inscreveram. 28 ideias foram pitchadas na sexta à noite. Mas os 7 projetos que nasceram foram construídos por times mistos, incluindo muita gente que não pitchou nada.',
       '## O que acontece se você não tem ideia',
@@ -219,6 +221,7 @@ export const BLOG_POSTS = [
     excerpt: 'A regra mais simples do Startup Weekend: qualquer pessoa pode subir e apresentar uma ideia em 60 segundos. Como funciona na prática.',
     image: '/images/blog_pitch.svg',
     slug: 'pitch-60-segundos',
+    related: ['como-nasce-uma-startup-em-54-horas', 'preciso-ter-uma-ideia-startup-weekend'],
     body: [
       'Na abertura do Startup Weekend, a facilitadora pede que quem tiver uma ideia levante a mão e suba ao palco. Na edição de 2025, no Centro Empresarial de Timbó, 28 pessoas subiram. Cada uma teve 60 segundos e um cronômetro projetado na parede.',
       'Sem slides. Sem pré-requisito. Você levanta a mão e fala.',
@@ -241,6 +244,7 @@ export const BLOG_POSTS = [
     excerpt: 'N\u00e3o. A maioria chega sem ideia. Funciona assim mesmo.',
     image: '/images/blog_mochila.svg',
     slug: 'preciso-ter-uma-ideia-startup-weekend',
+    related: ['como-nasce-uma-startup-em-54-horas', 'cheguei-sem-ideia'],
     body: [
       'N\u00e3o. E a maioria das pessoas que participa tamb\u00e9m n\u00e3o tem.',
       'Na primeira edi\u00e7\u00e3o do Startup Weekend Timb\u00f3, em maio de 2025, 34 pessoas participaram. Foram 28 ideias pitchadas na sexta \u00e0 noite, mas boa parte da sala n\u00e3o pitchou nada e entrou num time mesmo assim.',
@@ -262,6 +266,7 @@ export const BLOG_POSTS = [
     excerpt: 'O que acontece por dentro de um Startup Weekend. Spoiler: \u00e9 mais bagun\u00e7ado do que parece.',
     image: '/images/blog_historias.svg',
     slug: 'como-nasce-uma-startup-em-54-horas',
+    related: ['coisas-que-ninguem-te-conta-startup-weekend', 'o-que-acontece-depois-startup-weekend'],
     body: [
       'Criar uma startup em um fim de semana parece absurdo. Na pr\u00e1tica \u00e9 absurdo mesmo, mas por motivos que voc\u00ea n\u00e3o espera. N\u00e3o \u00e9 a falta de tempo que pega. \u00c9 a quantidade de decis\u00f5es erradas que voc\u00ea precisa tomar r\u00e1pido para chegar nas certas. Na edi\u00e7\u00e3o de 2025 em Timb\u00f3, 7 startups nasceram assim.',
       '## Sexta-feira \u00e0 noite',
@@ -285,6 +290,7 @@ export const BLOG_POSTS = [
     excerpt: 'O evento \u00e9 mais intenso do que qualquer site faz parecer. Cinco coisas que voc\u00ea s\u00f3 descobre participando.',
     image: '/images/blog_pitch.svg',
     slug: 'coisas-que-ninguem-te-conta-startup-weekend',
+    related: ['como-nasce-uma-startup-em-54-horas', 'o-que-acontece-depois-startup-weekend'],
     body: [
       'O site do Startup Weekend mostra times sorridentes, pitch no palco, pr\u00eamio no final. Tudo verdade. Mas tem outras verdades que n\u00e3o cabem em foto de divulga\u00e7\u00e3o.',
       '## 1. O cansa\u00e7o \u00e9 real',
@@ -305,6 +311,7 @@ export const BLOG_POSTS = [
     excerpt: 'SC \u00e9 o 2\u00ba estado em startups no Brasil. O Vale do Itaja\u00ed, de Blumenau a Timb\u00f3, constr\u00f3i seu pr\u00f3prio polo com DNA industrial.',
     image: '/images/blog_historias.svg',
     slug: 'ecossistema-startups-vale-do-itajai',
+    related: ['como-nasce-uma-startup-em-54-horas', 'cheguei-sem-ideia'],
     body: [
       'Santa Catarina \u00e9 o segundo estado com mais startups no Brasil, atr\u00e1s de S\u00e3o Paulo. Cresceu 17,8% entre 2024 e 2025 segundo o Sebrae Startups Report. S\u00e3o mais de 27 mil empresas de tecnologia no estado, com faturamento anual acima de R$ 28 bilh\u00f5es, algo como 7,5% do PIB estadual.',
       'No Global Startup Ecosystem Index 2025 da StartupBlink, o estado \u00e9 o \u00fanico ao lado de S\u00e3o Paulo a colocar duas cidades no top 10 brasileiro: Florian\u00f3polis (278\u00aa no ranking global) e Joinville (423\u00aa, com salto de 108 posi\u00e7\u00f5es em um ano). Blumenau aparece na 612\u00aa posi\u00e7\u00e3o e cresceu em SaaS, com 75% das startups locais nesse modelo. Oito cidades catarinenses entraram no ranking mundial.',
@@ -324,6 +331,7 @@ export const BLOG_POSTS = [
     excerpt: 'O evento termina domingo. Para muita gente, alguma coisa continua depois.',
     image: '/images/blog_mochila.svg',
     slug: 'o-que-acontece-depois-startup-weekend',
+    related: ['ecossistema-startups-vale-do-itajai', 'preciso-ter-uma-ideia-startup-weekend'],
     body: [
       'Domingo \u00e0 noite. Fotos, aplausos, cansa\u00e7o. Segunda-feira de manh\u00e3, alarme, rotina, e-mail. E a\u00ed?',
       '## Projetos',
