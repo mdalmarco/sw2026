@@ -383,7 +383,7 @@ export const SPONSORS: Record<'global'|'estadual'|'local', { name: string; logo:
     { name: 'KLAB', logo: '/images/sponsors/klab.png', dark: 'warm' },
     { name: 'Notion', logo: '/images/sponsors/notion.png', dark: 'warm' },
     { name: 'Investidores.vc', logo: '/images/sponsors/investidores.png', dark: 'warm' },
-    // TODO: reenviar (vieram corrompidos): AWS, Hostinger, Inova, Midihub, nd, Nexpon, WOW, Sebrae, 49 Educação
+    // Pendente: logos AWS, Hostinger, Inova, Midihub, Nexpon, WOW, Sebrae, 49 Educação
   ],
   local: [
     { name: 'Conecta AMVE Timbó',         logo: '/images/sponsors/conecta_amve.webp',  dark: 'warm' },
