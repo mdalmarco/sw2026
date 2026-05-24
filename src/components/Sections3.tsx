@@ -200,7 +200,7 @@ export function Mentors() {
               </div>
               <div className="font-body text-[0.875rem] text-ink-muted">
                 Acompanhe nosso Instagram{' '}
-                <a href="#" className="font-semibold text-orange no-underline">
+                <a href="https://www.instagram.com/sw.timbo/" target="_blank" rel="noopener noreferrer" className="font-semibold text-orange no-underline">
                   @sw.timbo
                 </a>{' '}
                 para novidades
