@@ -393,6 +393,59 @@ export const SPONSORS: Record<'global'|'estadual'|'local', { name: string; logo:
   ],
 };
 
+
+// ─── Na Mídia ───
+export const PRESS = [
+  {
+    source: 'Economia SC',
+    title: 'Ponto Seguro vence o primeiro Startup Weekend de Timbó',
+    url: 'https://economiasc.com/2025/05/29/ponto-seguro-vence-o-primeiro-startup-weekend-de-timbo/',
+    type: 'matéria',
+  },
+  {
+    source: 'Instituto Gene',
+    title: '1º Techstars Startup Weekend Timbó supera expectativas e cria sete startups',
+    url: 'https://institutogene.org.br/index.php/2025/05/28/1o-techstars-startup-weekend-timbo-supera-expectativas-e-cria-sete-startups-durante-uma-imersao-de-54-horas/',
+    type: 'matéria',
+  },
+  {
+    source: 'Jornal do Médio Vale',
+    title: 'Timbó se prepara para o Startup Weekend: impulsione sua ideia e crie sua startup',
+    url: 'https://jornaldomediovale.com.br/geral/timbo-se-prepara-para-o-startup-weekend-impulsione-sua-ideia-e-crie-sua-startup/',
+    type: 'matéria',
+  },
+  {
+    source: 'Trentina FM',
+    title: 'Ponto Seguro inova e vence o Startup Weekend',
+    url: 'https://trentinafm.com.br/ponto-seguro-inova-e-vence-o-startup-weekend/',
+    type: 'matéria',
+  },
+  {
+    source: 'Instituto Gene',
+    title: 'Em maio, Timbó vai sediar um dos maiores eventos de empreendedorismo do mundo',
+    url: 'https://institutogene.org.br/index.php/2025/03/24/em-maio-timbo-vai-sediar-um-dos-maiores-eventos-de-empreendedorismo-do-mundo/',
+    type: 'matéria',
+  },
+  {
+    source: 'Jornal do Médio Vale',
+    title: 'Startup Weekend Timbó se prepara para receber o maior evento de empreendedorismo',
+    url: 'https://jornaldomediovale.com.br/geral/startup-weekend-timbo-se-prepara-para-receber-o-maior-evento-de-empreendedorismo/',
+    type: 'matéria',
+  },
+  {
+    source: 'Techstars',
+    title: '1st Techstars Startup Weekend Timbó',
+    url: 'https://www.startmybusiness.com/events/1st-techstars-startup-weekend-timb',
+    type: 'página oficial',
+  },
+  {
+    source: 'YouTube',
+    title: 'Startup Weekend Timbó 2025 — Recap',
+    url: 'https://www.youtube.com/watch?v=udobr4J4Z9U',
+    type: 'vídeo',
+  },
+];
+
 // ─── FAQ ───
 export const FAQ = [
   {
