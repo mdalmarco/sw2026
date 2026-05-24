@@ -19,7 +19,7 @@ export function SectionHeader({
       <div className={`eyebrow ${center ? 'justify-center' : ''}`}>{eyebrow}</div>
       <h2
         id={id}
-        className={`mb-4 max-w-[22ch] font-display text-[clamp(1.75rem,3.5vw,2.75rem)] font-extrabold leading-[1.1] tracking-[-0.022em] text-ink ${
+        className={`mb-6 max-w-[22ch] font-display text-[clamp(1.75rem,3.5vw,2.75rem)] font-extrabold leading-[1.1] tracking-[-0.022em] text-ink ${
           center ? 'mx-auto' : ''
         }`}
       >
