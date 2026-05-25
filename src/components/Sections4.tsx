@@ -95,7 +95,7 @@ export function Past() {
                       className="h-full w-full object-cover"
                     />
                   ) : (
-                    <span className="font-display text-[0.6875rem] font-bold text-ink-faint">
+                    <span className="font-display text-[0.75rem] font-bold text-ink-faint">
                       {t.name
                         .split(' ')
                         .map((n) => n[0])
@@ -113,7 +113,7 @@ export function Past() {
                   </div>
                 </div>
               </div>
-              <div className="mt-5 border-t border-[var(--line-soft)] pt-5 font-display text-[0.6875rem] font-bold uppercase tracking-[0.08em] text-orange">
+              <div className="mt-5 border-t border-[var(--line-soft)] pt-5 font-display text-[0.75rem] font-bold uppercase tracking-[0.08em] text-orange">
                 → {t.result}
               </div>
             </article>
@@ -164,7 +164,7 @@ export function Pricing() {
 
         {/* Card de preço */}
         <div className="mx-auto max-w-[520px] rounded-2xl border-2 border-orange bg-paper p-10 text-left shadow-[0_8px_32px_oklch(0.5_0.12_40_/_0.12)]">
-          <div className="mb-4 inline-block rounded bg-ink px-3 py-1.5 font-display text-[0.6875rem] font-extrabold uppercase tracking-[0.12em] text-paper">
+          <div className="mb-4 inline-block rounded bg-ink px-3 py-1.5 font-display text-[0.75rem] font-extrabold uppercase tracking-[0.12em] text-paper">
             {PRICING.tag}
           </div>
           <div className="mb-1 font-display text-[3.5rem] font-black leading-none tracking-[-0.025em] text-ink">
