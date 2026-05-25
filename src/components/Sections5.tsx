@@ -48,8 +48,8 @@ export function Press() {
 // ════════════════ PATROCINADORES ════════════════
 export function Sponsors() {
   const tiers = [
-    { key: 'global' as const, label: 'Patrocinadores Globais', badge: 'Global', badgeClass: 'bg-orange text-white', cols: 'grid-cols-5 max-md:grid-cols-2', slots: 5 },
-    { key: 'estadual' as const, label: 'Patrocinadores Estaduais', badge: 'Estadual', badgeClass: 'bg-blue text-white', cols: 'grid-cols-4 max-md:grid-cols-2', slots: 4 },
+    { key: 'global' as const, label: 'Patrocinadores Globais', badge: 'Global', badgeClass: 'bg-orange text-ink', cols: 'grid-cols-5 max-md:grid-cols-2', slots: 5 },
+    { key: 'estadual' as const, label: 'Patrocinadores Estaduais', badge: 'Estadual', badgeClass: 'bg-blue text-ink', cols: 'grid-cols-4 max-md:grid-cols-2', slots: 4 },
     { key: 'local' as const, label: 'Patrocinadores Locais', badge: 'Local', badgeClass: 'bg-paper border border-[var(--line)] text-ink', cols: 'grid-cols-4 max-md:grid-cols-2', slots: 4 },
   ];
 
@@ -197,7 +197,7 @@ export function FinalCTA() {
         </p>
         <a
           href={PRICING.symplaUrl} target="_blank" rel="noopener noreferrer"
-          className="inline-block min-h-[56px] rounded-lg bg-orange px-9 py-[18px] font-display text-[0.9375rem] font-extrabold uppercase tracking-[0.06em] text-white shadow-[0_2px_12px_oklch(0.5_0.12_40_/_0.18)] transition-all hover:-translate-y-0.5 hover:bg-orange-dark"
+          className="inline-block min-h-[56px] rounded-lg bg-orange-dark px-9 py-[18px] font-display text-[0.9375rem] font-extrabold uppercase tracking-[0.06em] text-white shadow-[0_2px_12px_oklch(0.5_0.12_40_/_0.18)] transition-all hover:-translate-y-0.5 hover:bg-orange-dark"
         >
           Quero participar
         </a>
@@ -212,7 +212,7 @@ export function MobileStickyCTA() {
     <div className="fixed bottom-0 left-0 right-0 z-[90] border-t border-[var(--line)] bg-paper p-3 shadow-[0_-4px_16px_oklch(0_0_0_/_0.06)] md:hidden">
       <a
         href={PRICING.symplaUrl} target="_blank" rel="noopener noreferrer"
-        className="block w-full rounded-lg bg-orange py-4 text-center font-display text-[0.9375rem] font-extrabold uppercase tracking-[0.06em] text-white"
+        className="block w-full rounded-lg bg-orange-dark py-4 text-center font-display text-[0.9375rem] font-extrabold uppercase tracking-[0.06em] text-white"
       >
         Inscreva-se · Faltam {EVENT.daysUntil} dias
       </a>
