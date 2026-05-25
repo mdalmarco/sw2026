@@ -8,7 +8,7 @@ export function ActivityStrip() {
     <section className="border-y border-[var(--line-soft)] bg-paper py-7" aria-label="Última edição">
       <div className="mx-auto max-w-[1200px] px-8 max-md:px-5">
         <div className="flex flex-wrap items-center justify-between gap-6">
-          <span className="font-display text-[0.6875rem] font-bold uppercase tracking-[0.12em] text-ink-faint">
+          <span className="font-display text-[0.75rem] font-bold uppercase tracking-[0.1em] text-ink-faint">
             Última edição em números
           </span>
           <div className="flex flex-wrap gap-8">
