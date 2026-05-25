@@ -427,11 +427,8 @@ export const TESTIMONIALS = [
 // ─── Infraestrutura do local ───
 export const VENUE_FEATURES = [
   'Sala principal para abertura e pitches finais',
-  'Salas de trabalho separadas para cada time',
   'Wi-Fi de alta velocidade durante todo o evento',
-  'Café, água e lanches o tempo todo',
   'Refeições inclusas (jantar de sexta, almoço e jantar de sábado, almoço de domingo)',
-  'Estacionamento gratuito no local',
   'Acessibilidade para pessoas com deficiência',
 ];
 
@@ -439,10 +436,10 @@ export const VENUE_FEATURES = [
 export const PRICING = {
   vagasPreenchidas: 32,
   vagasTotais: 50,
-  loteEncerra: 23, // dias
+  loteEncerra: 15, // dias até encerrar pré-venda (09/06)
   tag: 'Pré-venda',
-  valor: '70',
-  meta: 'À vista ou em até 3x sem juros · Lotes seguintes a partir de R$ 119',
+  valor: '89,90',
+  meta: 'À vista ou em até 3x sem juros · 1º lote R$ 119,90 · 2º lote R$ 149,90',
   symplaUrl: 'https://www.sympla.com.br/evento/techstars-startup-weekend-timbo-2026/3403386',
   includes: [
     'Acesso completo aos 3 dias de evento',
