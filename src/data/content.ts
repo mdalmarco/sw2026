@@ -428,7 +428,7 @@ export const TESTIMONIALS = [
 export const VENUE_FEATURES = [
   'Sala principal para abertura e pitches finais',
   'Wi-Fi de alta velocidade durante todo o evento',
-  'Refeições inclusas (jantar de sexta, almoço e jantar de sábado, almoço de domingo)',
+  'Refeições inclusas: coffee break de boas-vindas na sexta; coffee breaks, almoço e jantar no sábado; coffee breaks e almoço no domingo',
   'Acessibilidade para pessoas com deficiência',
 ];
 
