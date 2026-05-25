@@ -22,7 +22,7 @@ export function Blog() {
             intro="Histórias de quem já passou pelo SW, dicas para se preparar e referências sobre empreendedorismo no Vale do Itajaí."
           />
           <div className="mt-8 grid grid-cols-3 gap-6 max-md:grid-cols-1">
-            {BLOG_POSTS.map((post) => (
+            {BLOG_POSTS.slice(0, 3).map((post) => (
               <Link
                 key={post.title}
                 to={`/blog/${post.slug}`}
@@ -93,6 +93,62 @@ export function Takeaways() {
             </div>
           ))}
         </div>
+
+          {BLOG_POSTS.length > 3 && (
+            <div className="mt-8 text-center">
+              <button
+                onClick={() => {
+                  const el = document.getElementById('blog-expanded');
+                  if (el) { el.classList.toggle('hidden'); }
+                  const btn = document.getElementById('blog-toggle');
+                  if (btn) { btn.textContent = btn.textContent?.includes('Ver') ? '← Mostrar menos' : `Ver todos os ${BLOG_POSTS.length} artigos →`; }
+                }}
+                id="blog-toggle"
+                className="font-display text-[0.8125rem] font-bold uppercase tracking-[0.08em] text-orange transition-colors hover:underline"
+              >
+                {`Ver todos os ${BLOG_POSTS.length} artigos →`}
+              </button>
+            </div>
+          )}
+
+          <div id="blog-expanded" className="mt-6 hidden grid grid-cols-3 gap-6 max-md:grid-cols-1">
+            {BLOG_POSTS.slice(3).map((post) => (
+              <Link
+                key={post.title}
+                to={`/blog/${post.slug}`}
+                className="group block overflow-hidden rounded-xl bg-paper transition-all hover:-translate-y-1 hover:shadow-[0_8px_24px_oklch(0_0_0_/_0.06)]"
+              >
+                <div className="aspect-[16/10] overflow-hidden bg-gradient-to-br from-paper-warm to-paper-warmer">
+                  {post.image ? (
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="flex h-full w-full items-center justify-center font-display text-[0.6875rem] font-semibold uppercase tracking-[0.1em] text-ink-faint">
+                      Em breve
+                    </div>
+                  )}
+                </div>
+                <div className="p-6">
+                  <div className="mb-3 font-display text-[0.6875rem] font-bold uppercase tracking-[0.1em] text-orange">
+                    {post.meta}
+                  </div>
+                  <h3 className="mb-2 font-display text-[1.0625rem] font-bold leading-[1.3] text-ink">
+                    {post.title}
+                  </h3>
+                  <p className="mb-4 font-body text-[0.9375rem] leading-[1.5] text-ink-muted">
+                    {post.excerpt}
+                  </p>
+                  <span className="font-display text-[0.8125rem] font-bold text-orange transition-all group-hover:underline">
+                    Ler artigo →
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
       </div>
     </section>
   );
