@@ -164,8 +164,8 @@ export function Vibe() {
             <em className="not-italic text-orange">Dá pra mostrar.</em>
           </h2>
           <p className="mt-5 max-w-[48ch] font-body text-[1.125rem] leading-[1.55] text-ink-soft">
-            54 horas no CETISA, em Timbó. Pessoas que não se conheciam na sexta, construindo
-            coisas juntas no domingo. Edição 2025.
+            54 horas em Timbó. Pessoas que não se conheciam na sexta,
+            construindo coisas juntas no domingo. Edição 2025.
           </p>
         </div>
 
