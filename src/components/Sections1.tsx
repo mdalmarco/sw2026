@@ -92,7 +92,7 @@ export function HowItWorks() {
   const day = SCHEDULE_DAYS[activeDay];
 
   return (
-    <section id="como-funciona" className="py-24" aria-labelledby="how-title">
+    <section id="como-funciona" className="py-24 overflow-x-hidden" aria-labelledby="how-title">
       <div className="mx-auto max-w-[1200px] px-8 max-md:px-5">
         <SectionHeader
           id="how-title"
