@@ -10,7 +10,7 @@ export function Press() {
         <div className="mb-10 flex items-center gap-4">
           <h2
             id="press-title"
-            className="font-display text-[0.6875rem] font-bold uppercase tracking-[0.15em] text-ink-muted"
+            className="font-display text-[0.75rem] font-bold uppercase tracking-[0.15em] text-ink-muted"
           >
             Na mídia
           </h2>
@@ -30,7 +30,7 @@ export function Press() {
                 {item.type === 'vídeo' ? '▶' : item.type === 'página oficial' ? '★' : '📰'}
               </div>
               <div className="min-w-0">
-                <div className="mb-1 font-display text-[0.6875rem] font-bold uppercase tracking-[0.08em] text-orange">
+                <div className="mb-1 font-display text-[0.75rem] font-bold uppercase tracking-[0.08em] text-orange">
                   {item.source}
                 </div>
                 <div className="font-display text-[0.875rem] font-bold leading-[1.35] text-ink transition-colors group-hover:text-orange">
@@ -76,7 +76,7 @@ export function Sponsors() {
                   {tier.label}
                 </span>
                 <span
-                  className={`rounded px-2.5 py-1 font-display text-[0.625rem] font-bold uppercase tracking-[0.1em] ${tier.badgeClass}`}
+                  className={`rounded px-2.5 py-1 font-display text-[0.75rem] font-bold uppercase tracking-[0.1em] ${tier.badgeClass}`}
                 >
                   {tier.badge}
                 </span>
@@ -104,7 +104,7 @@ export function Sponsors() {
                   : Array.from({ length: tier.slots }).map((_, i) => (
                       <div
                         key={i}
-                        className="flex aspect-[16/9] items-center justify-center rounded-[10px] bg-paper-warm font-display text-[0.6875rem] font-semibold uppercase tracking-[0.08em] text-ink-faint"
+                        className="flex aspect-[16/9] items-center justify-center rounded-[10px] bg-paper-warm font-display text-[0.75rem] font-semibold uppercase tracking-[0.08em] text-ink-faint"
                       >
                         [ Em breve ]
                       </div>
@@ -238,7 +238,7 @@ export function Footer() {
             </p>
           </div>
           <div>
-            <h3 className="mb-4 font-display text-[0.6875rem] font-bold uppercase tracking-[0.12em] text-orange">
+            <h3 className="mb-4 font-display text-[0.75rem] font-bold uppercase tracking-[0.12em] text-orange">
               Evento
             </h3>
             <ul className="grid gap-2.5">
@@ -261,7 +261,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="mb-4 font-display text-[0.6875rem] font-bold uppercase tracking-[0.12em] text-orange">
+            <h3 className="mb-4 font-display text-[0.75rem] font-bold uppercase tracking-[0.12em] text-orange">
               Contato
             </h3>
             <ul className="grid gap-2.5 font-body text-[0.9375rem] leading-[1.5] text-[oklch(0.85_0.01_60)]">
@@ -274,7 +274,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="mb-4 font-display text-[0.6875rem] font-bold uppercase tracking-[0.12em] text-orange">
+            <h3 className="mb-4 font-display text-[0.75rem] font-bold uppercase tracking-[0.12em] text-orange">
               Siga
             </h3>
             <ul className="grid gap-2.5">
