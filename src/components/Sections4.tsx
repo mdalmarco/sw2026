@@ -158,7 +158,7 @@ export function Pricing() {
             <div className="h-full rounded-[3px] bg-orange" style={{ width: `${pct}%` }} />
           </div>
           <div className="mt-2 font-display text-[0.75rem] tracking-[0.04em] text-ink-muted">
-            Lote promocional encerra em {PRICING.loteEncerra} dias
+            Pré-venda encerra em {PRICING.loteEncerra} dias
           </div>
         </div>
 
