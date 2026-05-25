@@ -113,7 +113,7 @@ export function HowItWorks() {
 
         {/* Tabs por dia */}
         <div
-          className="mb-8 inline-flex gap-1 rounded-[10px] bg-paper-warm p-1 max-md:w-full max-md:overflow-x-auto"
+          className="mb-8 inline-flex gap-1 rounded-[10px] bg-paper-warm p-1 max-md:w-full max-md:overflow-x-auto max-md:max-w-[calc(100vw-40px)]"
           role="tablist"
         >
           {SCHEDULE_DAYS.map((d, i) => (
