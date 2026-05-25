@@ -46,7 +46,7 @@ export default function Nav() {
           href={PRICING.symplaUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-md bg-orange px-5 py-2.5 font-display text-[0.8125rem] font-bold uppercase tracking-[0.06em] text-white transition-all hover:-translate-y-px hover:bg-orange-dark max-lg:hidden"
+          className="rounded-md bg-orange-dark px-5 py-2.5 font-display text-[0.8125rem] font-bold uppercase tracking-[0.06em] text-white transition-all hover:-translate-y-px hover:bg-[#A83510] max-lg:hidden"
         >
           Inscreva-se
         </a>
@@ -98,7 +98,7 @@ export default function Nav() {
               href={PRICING.symplaUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full rounded-md bg-orange py-3.5 text-center font-display text-[0.875rem] font-bold uppercase tracking-[0.06em] text-white transition-colors hover:bg-orange-dark"
+              className="block w-full rounded-md bg-orange-dark py-3.5 text-center font-display text-[0.875rem] font-bold uppercase tracking-[0.06em] text-white transition-colors hover:bg-[#A83510]"
             >
               Inscreva-se
             </a>
