@@ -37,13 +37,13 @@ export function Blog() {
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   ) : (
-                    <div className="flex h-full w-full items-center justify-center font-display text-[0.6875rem] font-semibold uppercase tracking-[0.1em] text-ink-faint">
+                    <div className="flex h-full w-full items-center justify-center font-display text-[0.75rem] font-semibold uppercase tracking-[0.1em] text-ink-faint">
                       Em breve
                     </div>
                   )}
                 </div>
                 <div className="p-6">
-                  <div className="mb-3 font-display text-[0.6875rem] font-bold uppercase tracking-[0.1em] text-orange">
+                  <div className="mb-3 font-display text-[0.75rem] font-bold uppercase tracking-[0.1em] text-orange">
                     {post.meta}
                   </div>
                   <h3 className="mb-2 font-display text-[1.0625rem] font-bold leading-[1.3] text-ink">
@@ -127,13 +127,13 @@ export function Takeaways() {
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   ) : (
-                    <div className="flex h-full w-full items-center justify-center font-display text-[0.6875rem] font-semibold uppercase tracking-[0.1em] text-ink-faint">
+                    <div className="flex h-full w-full items-center justify-center font-display text-[0.75rem] font-semibold uppercase tracking-[0.1em] text-ink-faint">
                       Em breve
                     </div>
                   )}
                 </div>
                 <div className="p-6">
-                  <div className="mb-3 font-display text-[0.6875rem] font-bold uppercase tracking-[0.1em] text-orange">
+                  <div className="mb-3 font-display text-[0.75rem] font-bold uppercase tracking-[0.1em] text-orange">
                     {post.meta}
                   </div>
                   <h3 className="mb-2 font-display text-[1.0625rem] font-bold leading-[1.3] text-ink">
@@ -200,7 +200,7 @@ export function Mentors() {
               }`}
             >
               {tab.label}
-              <span className="ml-1.5 font-display text-[0.6875rem] font-semibold text-ink-muted">
+              <span className="ml-1.5 font-display text-[0.75rem] font-semibold text-ink-muted">
                 {tab.count}
               </span>
             </button>
@@ -238,9 +238,9 @@ export function Mentors() {
                       href={m.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-2 inline-flex items-center gap-1.5 font-display text-[0.6875rem] font-bold uppercase tracking-[0.08em] text-ink-muted no-underline transition-colors hover:text-orange"
+                      className="mt-2 inline-flex items-center gap-1.5 font-display text-[0.75rem] font-bold uppercase tracking-[0.08em] text-ink-muted no-underline transition-colors hover:text-orange"
                     >
-                      <span className="inline-flex h-[18px] w-[18px] items-center justify-center rounded-[3px] bg-ink-muted font-display text-[0.625rem] font-extrabold text-paper">
+                      <span className="inline-flex h-[18px] w-[18px] items-center justify-center rounded-[3px] bg-ink-muted font-display text-[0.75rem] font-extrabold text-paper">
                         in
                       </span>
                       LinkedIn
