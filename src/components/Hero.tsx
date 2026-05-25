@@ -55,7 +55,7 @@ export default function Hero() {
           </a>
           <a
             href="#vibe"
-            className="border-b border-[var(--line)] pb-0.5 font-display text-[0.875rem] font-semibold uppercase tracking-[0.04em] text-ink-soft transition-colors hover:border-orange hover:text-orange"
+            className="inline-block py-2.5 border-b border-[var(--line)] pb-0.5 font-display text-[0.875rem] font-semibold uppercase tracking-[0.04em] text-ink-soft transition-colors hover:border-orange hover:text-orange"
           >
             Ver como é estar lá ↓
           </a>
