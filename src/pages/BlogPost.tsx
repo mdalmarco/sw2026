@@ -159,7 +159,7 @@ export default function BlogPost() {
               href={PRICING.symplaUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block rounded-lg bg-orange px-8 py-3 font-display text-sm font-extrabold uppercase tracking-wider text-white transition-colors hover:bg-orange-dark"
+              className="inline-block rounded-lg bg-orange-dark px-8 py-3 font-display text-sm font-extrabold uppercase tracking-wider text-white transition-colors hover:bg-orange-dark"
             >
               Quero participar →
             </a>
