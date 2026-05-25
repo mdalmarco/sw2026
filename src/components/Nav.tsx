@@ -54,7 +54,7 @@ export default function Nav() {
         {/* Mobile hamburger */}
         <button
           onClick={() => setOpen(!open)}
-          className="hidden max-lg:flex h-10 w-10 flex-col items-center justify-center gap-[5px]"
+          className="hidden max-lg:flex h-11 w-11 flex-col items-center justify-center gap-[5px]"
           aria-label={open ? 'Fechar menu' : 'Abrir menu'}
           aria-expanded={open}
         >
@@ -88,7 +88,7 @@ export default function Nav() {
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="block py-3 font-display text-[0.9375rem] font-semibold uppercase tracking-[0.04em] text-ink-soft transition-colors hover:text-orange"
+              className="block py-4 font-display text-[1rem] font-semibold uppercase tracking-[0.04em] text-ink-soft transition-colors hover:text-orange"
             >
               {link.label}
             </a>
