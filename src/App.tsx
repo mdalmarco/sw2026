@@ -16,7 +16,7 @@ function Home() {
       <AureaGlow />
       <Nav />
 
-      <main className="pb-0 max-md:pb-20">
+      <main className="pb-0 max-md:pb-20 overflow-x-hidden">
         <Hero />
         <ActivityStrip />
         <WhatIs />
