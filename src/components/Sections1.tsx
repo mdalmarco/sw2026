@@ -122,7 +122,7 @@ export function HowItWorks() {
               role="tab"
               aria-selected={activeDay === i}
               onClick={() => setActiveDay(i)}
-              className={`whitespace-nowrap rounded-[7px] px-5 py-2.5 max-md:flex-1 max-md:px-2 max-md:py-2 max-md:text-center font-display text-[0.8125rem] max-md:text-[0.6875rem] font-bold uppercase tracking-[0.06em] max-md:tracking-[0.02em] transition-all ${
+              className={`whitespace-nowrap rounded-[7px] px-5 py-2.5 max-md:flex-1 max-md:px-2 max-md:py-3 max-md:text-center font-display text-[0.8125rem] max-md:text-[0.75rem] font-bold uppercase tracking-[0.06em] max-md:tracking-[0.02em] transition-all ${
                 activeDay === i
                   ? 'bg-paper text-ink shadow-[0_1px_3px_oklch(0_0_0_/_0.06)]'
                   : 'bg-transparent text-ink-muted'
