@@ -80,7 +80,7 @@ export default function BlogPost() {
           </nav>
 
           {/* Meta */}
-          <div className="mb-4 font-display text-[0.6875rem] font-bold uppercase tracking-[0.1em] text-orange">
+          <div className="mb-4 font-display text-[0.75rem] font-bold uppercase tracking-[0.1em] text-orange">
             {post.meta}
           </div>
 
@@ -134,10 +134,10 @@ export default function BlogPost() {
                       to={`/blog/${rel.slug}`}
                       className="group block rounded-lg border border-[var(--line-soft)] p-5 transition-all hover:border-orange hover:shadow-sm"
                     >
-                      <div className="mb-1 font-display text-[0.625rem] font-bold uppercase tracking-[0.12em] text-ink-faint">
+                      <div className="mb-1 font-display text-[0.75rem] font-bold uppercase tracking-[0.12em] text-ink-faint">
                         {i === 0 ? 'Próximo passo' : 'Leia também'}
                       </div>
-                      <div className="mb-1 font-display text-[0.6875rem] font-bold uppercase tracking-[0.08em] text-orange">
+                      <div className="mb-1 font-display text-[0.75rem] font-bold uppercase tracking-[0.08em] text-orange">
                         {rel.meta}
                       </div>
                       <div className="font-display text-[0.9375rem] font-bold text-ink transition-colors group-hover:text-orange">
