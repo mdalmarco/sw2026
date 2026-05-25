@@ -21,7 +21,7 @@ export default function Hero() {
             <strong className="font-extrabold text-orange">{EVENT.daysUntil} dias</strong>{' '}
             · acontece uma vez por ano
           </span>
-          <span className="rounded bg-paper-warm px-2.5 py-1 font-display text-[0.6875rem] font-bold uppercase tracking-[0.1em] text-ink-muted">
+          <span className="rounded bg-paper-warm px-2.5 py-1 font-display text-[0.75rem] font-bold uppercase tracking-[0.1em] text-ink-muted">
             {EVENT.edition}
           </span>
         </div>
@@ -70,7 +70,7 @@ export default function Hero() {
             { label: 'Pré-requisito', value: 'Nenhum' },
           ].map((m) => (
             <div key={m.label} className="flex flex-col gap-0.5">
-              <span className="font-display text-[0.625rem] font-bold uppercase tracking-[0.12em] text-ink-faint">
+              <span className="font-display text-[0.75rem] font-bold uppercase tracking-[0.1em] text-ink-faint">
                 {m.label}
               </span>
               <span className="font-display text-sm font-bold text-ink">{m.value}</span>
