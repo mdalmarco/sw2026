@@ -169,7 +169,7 @@ export function Pricing() {
           </div>
           <div className="mb-1 font-display text-[3.5rem] font-black leading-none tracking-[-0.025em] text-ink">
             <sup className="mr-1 text-[1.25rem] font-bold text-ink-muted">R$</sup>
-            {PRICING.valor}
+            {PRICING.valor}<sup className="ml-0.5 text-[1.25rem] font-bold text-ink-muted">,{PRICING.centavos}</sup>
           </div>
           <div className="mb-8 text-[0.875rem] text-ink-muted">{PRICING.meta}</div>
           <ul className="mb-8 grid gap-2.5">
