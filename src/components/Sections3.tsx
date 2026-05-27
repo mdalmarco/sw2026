@@ -59,40 +59,6 @@ export function Blog() {
               </Link>
             ))}
           </div>
-        </div>
-      </section>
-
-    </>
-  );
-}
-
-// ════════════════ O QUE VOCÊ LEVA ════════════════
-export function Takeaways() {
-  return (
-    <section className="bg-paper py-32" aria-labelledby="takeaway-title">
-      <div className="mx-auto max-w-[1200px] px-8 max-md:px-5">
-        <SectionHeader
-          id="takeaway-title"
-          eyebrow="Ao final do domingo"
-          title={
-            <>
-              Você sai com mais do que <em className="not-italic text-orange">chegou.</em>
-            </>
-          }
-        />
-        <div className="mt-8 grid grid-cols-3 gap-6 max-md:grid-cols-1">
-          {TAKEAWAYS.map((t) => (
-            <div key={t.num} className="rounded-xl bg-paper-warm p-8">
-              <span className="mb-4 block font-display text-[0.75rem] font-black tracking-[0.15em] text-orange">
-                {t.num}
-              </span>
-              <h3 className="mb-3 font-display text-[1.1875rem] font-bold leading-[1.25]">
-                {t.title}
-              </h3>
-              <p className="font-body text-[0.9375rem] leading-[1.6] text-ink-soft">{t.desc}</p>
-            </div>
-          ))}
-        </div>
 
           {BLOG_POSTS.length > 3 && (
             <div className="mt-8 text-center">
@@ -149,6 +115,40 @@ export function Takeaways() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+    </>
+  );
+}
+
+// ════════════════ O QUE VOCÊ LEVA ════════════════
+export function Takeaways() {
+  return (
+    <section className="bg-paper py-32" aria-labelledby="takeaway-title">
+      <div className="mx-auto max-w-[1200px] px-8 max-md:px-5">
+        <SectionHeader
+          id="takeaway-title"
+          eyebrow="Ao final do domingo"
+          title={
+            <>
+              Você sai com mais do que <em className="not-italic text-orange">chegou.</em>
+            </>
+          }
+        />
+        <div className="mt-8 grid grid-cols-3 gap-6 max-md:grid-cols-1">
+          {TAKEAWAYS.map((t) => (
+            <div key={t.num} className="rounded-xl bg-paper-warm p-8">
+              <span className="mb-4 block font-display text-[0.75rem] font-black tracking-[0.15em] text-orange">
+                {t.num}
+              </span>
+              <h3 className="mb-3 font-display text-[1.1875rem] font-bold leading-[1.25]">
+                {t.title}
+              </h3>
+              <p className="font-body text-[0.9375rem] leading-[1.6] text-ink-soft">{t.desc}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
