@@ -49,8 +49,8 @@ export function Press() {
 export function Sponsors() {
   const tiers = [
     { key: 'global' as const, label: 'Patrocinadores Globais', badge: 'Global', badgeClass: 'bg-orange text-ink', cols: 'grid-cols-5 max-md:grid-cols-2', slots: 5 },
-    { key: 'estadual' as const, label: 'Patrocinadores Estaduais', badge: 'Estadual', badgeClass: 'bg-blue text-ink', cols: 'grid-cols-4 max-md:grid-cols-2', slots: 4 },
-    { key: 'local' as const, label: 'Patrocinadores Locais', badge: 'Local', badgeClass: 'bg-paper border border-[var(--line)] text-ink', cols: 'grid-cols-4 max-md:grid-cols-2', slots: 4 },
+    { key: 'estadual' as const, label: 'Patrocinadores Estaduais', badge: 'Estadual', badgeClass: 'bg-blue text-ink', cols: 'grid-cols-5 max-md:grid-cols-2', slots: 5 },
+    { key: 'local' as const, label: 'Patrocinadores Locais', badge: 'Local', badgeClass: 'bg-paper border border-[var(--line)] text-ink', cols: 'grid-cols-5 max-md:grid-cols-2', slots: 5 },
   ];
 
   return (
