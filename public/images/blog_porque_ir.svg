@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#F5F0E8"/>
+  <rect x="0" y="0" width="800" height="500" fill="url(#g4)"/>
+  <defs>
+    <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5F0E8;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#EDE8DC;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <!-- porta aberta -->
+  <rect x="320" y="100" width="160" height="240" rx="6" fill="#E8571E" opacity="0.12"/>
+  <rect x="330" y="110" width="120" height="220" rx="4" fill="#E8571E" opacity="0.08"/>
+  <!-- porta aberta (aba) -->
+  <path d="M330 110 L280 130 L280 310 L330 330" fill="#E8571E" opacity="0.18"/>
+  <!-- pessoa entrando -->
+  <circle cx="360" cy="180" r="22" fill="#2BA8E0" opacity="0.35"/>
+  <rect x="348" y="205" width="24" height="55" rx="8" fill="#2BA8E0" opacity="0.25"/>
+  <!-- seta pra frente -->
+  <path d="M400 260 L440 230 L400 200" stroke="#E8571E" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.4"/>
+  <line x1="360" y1="230" x2="435" y2="230" stroke="#E8571E" stroke-width="6" stroke-linecap="round" opacity="0.3"/>
+  <!-- interrogação sutil -->
+  <text x="520" y="200" font-family="Arial" font-size="80" fill="#E8571E" opacity="0.1" font-weight="bold">?</text>
+  <text x="160" y="420" font-family="Arial" font-size="13" fill="#B8A898" letter-spacing="3" text-anchor="middle">PRA QUEM É · 7 MIN</text>
+  <text x="640" y="420" font-family="Arial" font-size="13" fill="#E8571E" letter-spacing="2" text-anchor="middle">STARTUP WEEKEND TIMBÓ</text>
+</svg>

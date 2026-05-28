@@ -3,6 +3,11 @@ import { ImageResponse } from '@vercel/og';
 export const config = { runtime: 'edge' };
 
 const POSTS: Record<string, { title: string; meta: string; highlight: string }> = {
+  'por-que-ir-se-nunca-empreendeu': {
+    title: 'Por que ir ao\nStartup Weekend\nse voc\u00ea nunca\nempreendeu',
+    meta: 'PRA QUEM \u00c9 \u00b7 7 MIN',
+    highlight: 'nunca empreendeu',
+  },
   'o-que-levar-na-mochila': {
     title: 'O que levar na\nmochila para o\nStartup Weekend',
     meta: 'COMO SE PREPARAR · 6 MIN',
